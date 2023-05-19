@@ -1,0 +1,14 @@
+{
+  "hash": "22c974235132c656173634e0c5f04fc3",
+  "result": {
+    "markdown": "---\ntitle: \"Week Two Blog\"\nauthor: \"Harun Celik\"\ndate: \"2023-05-19\"\ncategories: [Week Two]\n---\n\n\nWe are testing our blog. THIS IS A SECOND TEST.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nprint(\n  \"I think it works. It prints.\"\n)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"I think it works. It prints.\"\n```\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nprint(\n  \"This will not print\"\n  )\n```\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

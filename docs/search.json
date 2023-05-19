@@ -11,14 +11,21 @@
     "href": "allBlogs.html",
     "title": "Blogs",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nMay 19, 2023\n\n\nWeek One Blog\n\n\nHarun Celik\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nMay 19, 2023\n\n\nWeek One Blog\n\n\nHarun Celik\n\n\n\n\nMay 19, 2023\n\n\nWeek Two Blog\n\n\nHarun Celik\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog2023/Harun-Celik-Week-One/index.html",
-    "href": "blog2023/Harun-Celik-Week-One/index.html",
+    "objectID": "blog2023/WeekOne/Harun-Celik-Week-One/HarunCelikWeekOne.html",
+    "href": "blog2023/WeekOne/Harun-Celik-Week-One/HarunCelikWeekOne.html",
     "title": "Week One Blog",
     "section": "",
     "text": "We are testing our blog.\n\nprint(\n  \"I think it works. It prints.\"\n)\n\n[1] \"I think it works. It prints.\"\n\n\n\nprint(\n  \"This will not print\"\n  )"
+  },
+  {
+    "objectID": "blog2023/WeekTwo/Harun-Celik-Week-Two/HarunCelikWeekTwo.html",
+    "href": "blog2023/WeekTwo/Harun-Celik-Week-Two/HarunCelikWeekTwo.html",
+    "title": "Week Two Blog",
+    "section": "",
+    "text": "We are testing our blog. THIS IS A SECOND TEST.\n\nprint(\n  \"I think it works. It prints.\"\n)\n\n[1] \"I think it works. It prints.\"\n\n\n\nprint(\n  \"This will not print\"\n  )"
   },
   {
     "objectID": "index.html",

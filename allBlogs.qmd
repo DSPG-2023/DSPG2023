@@ -2,8 +2,7 @@
 title: "Blogs"
 maintainer: "Harun Celik"
 listing: 
-  contents:
-    - "blog-2023"
+  contents: docs
   type: table
   sort: "date desc"
   categories: true

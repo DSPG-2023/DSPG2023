@@ -3,7 +3,7 @@ title: "Blogs"
 maintainer: "Harun Celik"
 listing: 
   contents:
-    - ""
+    - "docs"
   type: grid
   sort: "date desc"
   categories: true

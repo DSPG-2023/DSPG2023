@@ -1,8 +1,8 @@
 ---
-title: "Week One Blog"
+title: "Week Two Blog"
 author: "Harun Celik"
 date: "2023-05-19"
-categories: [Week One]
+categories: [Week Two]
 ---
 
 We are testing our blog. THIS IS A SECOND TEST.

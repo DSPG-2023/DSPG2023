@@ -1,0 +1,20 @@
+---
+title: "Week One Blog"
+author: "Harun Celik"
+date: "2023-05-19"
+categories: [Week One]
+---
+
+We are testing our blog. THIS IS A SECOND TEST.
+
+```{r}
+print(
+  "I think it works. It prints."
+)
+```
+
+```{r, eval=FALSE}
+print(
+  "This will not print"
+  )
+```

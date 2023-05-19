@@ -11,11 +11,11 @@
     "href": "allBlogs.html",
     "title": "Blogs",
     "section": "",
-    "text": "No matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nMay 19, 2023\n\n\nWeek One Blog\n\n\nHarun Celik\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog-2023/Harun-Celik-Week-One/index.html",
-    "href": "blog-2023/Harun-Celik-Week-One/index.html",
+    "objectID": "blog2023/Harun-Celik-Week-One/index.html",
+    "href": "blog2023/Harun-Celik-Week-One/index.html",
     "title": "Week One Blog",
     "section": "",
     "text": "We are testing our blog.\n\nprint(\n  \"I think it works. It prints.\"\n)\n\n[1] \"I think it works. It prints.\"\n\n\n\nprint(\n  \"This will not print\"\n  )"

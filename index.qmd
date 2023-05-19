@@ -1,5 +1,5 @@
 ---
-title: "DSPG2023_Website"
+title: "DSPG 2023"
 ---
 
 This is a Quarto website hosting the projects and blogs from the 2023 Data Science for Public Good program at Iowa State University.

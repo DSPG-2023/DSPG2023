@@ -4,7 +4,7 @@
     "href": "about.html",
     "title": "About",
     "section": "",
-    "text": "About this site\n\n1 + 1\n\n[1] 2"
+    "text": "This page will contain information about participants.\n\n# For now, just look at this line of code :)\n1 + 1\n\n[1] 2"
   },
   {
     "objectID": "allBlogs.html",
@@ -16,7 +16,7 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "DSPG2023_Website",
+    "title": "DSPG 2023",
     "section": "",
     "text": "This is a Quarto website hosting the projects and blogs from the 2023 Data Science for Public Good program at Iowa State University.\n\nprint(\"Welcome to Our Page!\")\n\n[1] \"Welcome to Our Page!\""
   }

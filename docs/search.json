@@ -14,6 +14,13 @@
     "text": "No matching items"
   },
   {
+    "objectID": "blog-2023/Harun-Celik-Week-One/index.html",
+    "href": "blog-2023/Harun-Celik-Week-One/index.html",
+    "title": "Week One Blog",
+    "section": "",
+    "text": "We are testing our blog.\n\nprint(\n  \"I think it works. It prints.\"\n)\n\n[1] \"I think it works. It prints.\"\n\n\n\nprint(\n  \"This will not print\"\n  )"
+  },
+  {
     "objectID": "index.html",
     "href": "index.html",
     "title": "DSPG 2023",

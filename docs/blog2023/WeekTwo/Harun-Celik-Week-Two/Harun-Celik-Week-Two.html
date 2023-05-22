@@ -7,7 +7,7 @@
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 <meta name="author" content="Harun Celik">
-<meta name="dcterms.date" content="2023-05-19">
+<meta name="dcterms.date" content="2023-05-22">
 
 <title>DSPG2023_Website - Week Two Blog</title>
 <style>
@@ -186,7 +186,7 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
       <div>
       <div class="quarto-title-meta-heading">Published</div>
       <div class="quarto-title-meta-contents">
-        <p class="date">May 19, 2023</p>
+        <p class="date">May 22, 2023</p>
       </div>
     </div>
     
@@ -206,19 +206,38 @@ code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warni
 
 
 
-<p>We are testing our blog. THIS IS A SECOND TEST.</p>
+<p>In the second week, we focused on using <code>tidycensus</code> to get better at using the API for our research.</p>
+<p>Here’s an example pulling the table for all the public commuters in Iowa.</p>
 <div class="cell">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(</span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"I think it works. It prints."</span></span>
-<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidycensus)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2)</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(sf)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a>commuters_all <span class="ot">&lt;-</span> <span class="fu">get_acs</span>(<span class="at">year =</span> <span class="dv">2021</span>, </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a>                    <span class="at">geography =</span> <span class="st">"tract"</span>,</span>
+<span id="cb2-3"><a href="#cb2-3" aria-hidden="true" tabindex="-1"></a>                    <span class="at">state =</span> <span class="dv">19</span>,</span>
+<span id="cb2-4"><a href="#cb2-4" aria-hidden="true" tabindex="-1"></a>                    <span class="at">variables =</span> <span class="fu">c</span>(<span class="at">Total =</span> <span class="st">"B08006_011"</span>, <span class="at">Male =</span> <span class="st">"B08006_028"</span>, <span class="at">Female =</span> <span class="st">"B08006_045"</span>), </span>
+<span id="cb2-5"><a href="#cb2-5" aria-hidden="true" tabindex="-1"></a>                    <span class="at">geometry =</span> <span class="cn">TRUE</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a>commuters_all <span class="sc">%&gt;%</span></span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="fu">filter</span>(estimate <span class="sc">&gt;</span> <span class="dv">0</span>) <span class="sc">%&gt;%</span> <span class="fu">as.data.frame</span>() <span class="sc">%&gt;%</span></span>
+<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  <span class="fu">select</span>(<span class="sc">-</span><span class="st">"GEOID"</span>,<span class="sc">-</span><span class="st">"geometry"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <div class="cell-output cell-output-stdout">
-<pre><code>[1] "I think it works. It prints."</code></pre>
+<pre><code>                                         NAME variable estimate moe
+1        Census Tract 116, Scott County, Iowa    Total       12  17
+2        Census Tract 116, Scott County, Iowa   Female       12  17
+3     Census Tract 803, Cherokee County, Iowa    Total        1   2
+4     Census Tract 803, Cherokee County, Iowa     Male        1   2
+5  Census Tract 9605, Washington County, Iowa    Total        3   6
+6  Census Tract 9605, Washington County, Iowa     Male        3   6
+7        Census Tract 705, Sioux County, Iowa    Total        5  10
+8        Census Tract 705, Sioux County, Iowa     Male        5  10
+9      Census Tract 9601, Monona County, Iowa    Total        3   6
+10     Census Tract 9601, Monona County, Iowa     Male        3   6</code></pre>
 </div>
-</div>
-<div class="cell">
-<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">print</span>(</span>
-<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a>  <span class="st">"This will not print"</span></span>
-<span id="cb3-3"><a href="#cb3-3" aria-hidden="true" tabindex="-1"></a>  )</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
 
 

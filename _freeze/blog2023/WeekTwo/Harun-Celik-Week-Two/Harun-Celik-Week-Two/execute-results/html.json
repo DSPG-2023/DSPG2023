@@ -1,0 +1,14 @@
+{
+  "hash": "2f8f32d7ed927203f0bdb0ff0584d388",
+  "result": {
+    "markdown": "---\ntitle: \"Week Two Blog\"\nauthor: \"Harun Celik\"\ndate: \"2023-05-22\"\ncategories: [Week Two]\n---\n\n\nIn the second week, we focused on using `tidycensus` to get better at using the API for our research.\n\nHere's an example pulling the table for all the public commuters in Iowa.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nlibrary(tidycensus)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(sf)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ncommuters_all <- get_acs(year = 2021, \n                    geography = \"tract\",\n                    state = 19,\n                    variables = c(Total = \"B08006_011\", Male = \"B08006_028\", Female = \"B08006_045\"), \n                    geometry = TRUE)\n```\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\ncommuters_all %>%\n  filter(estimate > 0) %>% as.data.frame() %>%\n  select(-\"GEOID\",-\"geometry\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n                                         NAME variable estimate moe\n1        Census Tract 116, Scott County, Iowa    Total       12  17\n2        Census Tract 116, Scott County, Iowa   Female       12  17\n3     Census Tract 803, Cherokee County, Iowa    Total        1   2\n4     Census Tract 803, Cherokee County, Iowa     Male        1   2\n5  Census Tract 9605, Washington County, Iowa    Total        3   6\n6  Census Tract 9605, Washington County, Iowa     Male        3   6\n7        Census Tract 705, Sioux County, Iowa    Total        5  10\n8        Census Tract 705, Sioux County, Iowa     Male        5  10\n9      Census Tract 9601, Monona County, Iowa    Total        3   6\n10     Census Tract 9601, Monona County, Iowa     Male        3   6\n```\n:::\n:::\n",
+    "supporting": [],
+    "filters": [
+      "rmarkdown/pagebreak.lua"
+    ],
+    "includes": {},
+    "engineDependencies": {},
+    "preserve": {},
+    "postProcess": true
+  }
+}

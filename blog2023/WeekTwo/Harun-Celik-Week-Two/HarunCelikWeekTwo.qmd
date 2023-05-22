@@ -5,16 +5,16 @@ date: "2023-05-19"
 categories: [Week Two]
 ---
 
-We are testing our blog. THIS IS A SECOND TEST.
+On the second week of DSPG, my grad fellow gave to me.
 
 ```{r}
 print(
-  "I think it works. It prints."
+  "One DataCamp Course."
 )
 ```
 
 ```{r, eval=FALSE}
 print(
-  "This will not print"
+  "Two reading assignments."
   )
 ```

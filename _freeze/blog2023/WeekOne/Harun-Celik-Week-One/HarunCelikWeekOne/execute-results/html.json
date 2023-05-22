@@ -1,7 +1,7 @@
 {
-  "hash": "b2ef83e51ac6677d3fddc9a6181fc9a7",
+  "hash": "ea388720cf6564f2e6a641b7e14cf143",
   "result": {
-    "markdown": "---\ntitle: \"Week One Blog\"\nauthor: \"Harun Celik\"\ndate: \"2023-05-19\"\ncategories: [Week One]\n---\n\n\nWe are testing our blog.\n\n\n::: {.cell}\n\n```{.r .cell-code}\nprint(\n  \"I think it works. It prints.\"\n)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"I think it works. It prints.\"\n```\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nprint(\n  \"This will not print\"\n  )\n```\n:::\n",
+    "markdown": "---\ntitle: \"Week One Blog\"\nauthor: \"Harun Celik\"\ndate: \"2023-05-19\"\ncategories: [Week One]\n---\n\n\n## Introduction\n\nWeek one for me was all about setting up the logistics for my individual groceries team as well as getting the rest of the student-based logistics set out for DSPG.\n\nAn important lesson I learned in trying to set up the Quarto webpage is that the `docs` folder needs to be re-rendering the `index.html` file alongside the individual blog files. This makes it difficult to host the blogs without rendering the `qmd`. I wanted this to be the case so that we could instead display already knit files as opposed to having them re-knit on a push.\n\n## Demonstration for DSPG\n\n\n::: {.cell}\n\n```{.r .cell-code}\nprint(\n  \"I'll be using this code as a demonstration\"\n)\n```\n\n::: {.cell-output .cell-output-stdout}\n```\n[1] \"I'll be using this code as a demonstration\"\n```\n:::\n:::\n\n::: {.cell}\n\n```{.r .cell-code}\nprint(\n  \"This will not print an output in my demonstration\"\n  )\n```\n:::\n\n\n\n::: {.cell}\n\n```{.python .cell-code}\npy = \"python\"\nprint(f\"This one is {py}\")\n```\n\n::: {.cell-output .cell-output-stdout}\n```\nThis one is python\n```\n:::\n:::\n",
     "supporting": [],
     "filters": [
       "rmarkdown/pagebreak.lua"

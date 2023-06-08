@@ -11,28 +11,161 @@
     "href": "allBlogs.html",
     "title": "Blogs",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nMay 22, 2023\n\n\nWeek Two Blog\n\n\nHarun Celik\n\n\n\n\nMay 19, 2023\n\n\nWeek One Blog\n\n\nHarun Celik\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 2, 2023\n\n\nAI Local Foods Team Week Three Wrap Up\n\n\nAaron C\n\n\n\n\nJun 2, 2023\n\n\nGrocery Team Week Three Wrap Up\n\n\nAaron Null\n\n\n\n\nMay 31, 2023\n\n\nHousing Team Week Three Wrap Up\n\n\nAngelina Evans\n\n\n\n\nMay 25, 2023\n\n\nHousing Team Week Two Wrap Up\n\n\nGavin Fisher\n\n\n\n\nMay 24, 2023\n\n\nAI Local Foods Team Week Two Wrap Up\n\n\nDev Rokade\n\n\n\n\nMay 24, 2023\n\n\nGrocery Team Week Two Wrap Up\n\n\nAlex Cory\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "blog2023/WeekOne/Harun-Celik-Week-One/HarunCelikWeekOne.html",
-    "href": "blog2023/WeekOne/Harun-Celik-Week-One/HarunCelikWeekOne.html",
-    "title": "Week One Blog",
+    "objectID": "blog2023/WeekThree/Foods-Week-Three/Week3_WrapUp.html",
+    "href": "blog2023/WeekThree/Foods-Week-Three/Week3_WrapUp.html",
+    "title": "AI Local Foods Team Week Three Wrap Up",
     "section": "",
-    "text": "Week one for me was all about setting up the logistics for my individual groceries team as well as getting the rest of the student-based logistics set out for DSPG.\nAn important lesson I learned in trying to set up the Quarto webpage is that the docs folder needs to be re-rendering the index.html file alongside the individual blog files. This makes it difficult to host the blogs without rendering the qmd. I wanted this to be the case so that we could instead display already knit files as opposed to having them re-knit on a push."
+    "text": "The currents project objectives for this week was to\n\nCatch up on any additional training.\nCollect and find data on heirloom tomatoes, eggs, and bacon.\nLearning how to do web scraping in python through Datacamp.\nBuilding programs to do web scraping"
   },
   {
-    "objectID": "blog2023/WeekOne/Harun-Celik-Week-One/HarunCelikWeekOne.html#demonstration-for-dspg",
-    "href": "blog2023/WeekOne/Harun-Celik-Week-One/HarunCelikWeekOne.html#demonstration-for-dspg",
-    "title": "Week One Blog",
-    "section": "Demonstration for DSPG",
-    "text": "Demonstration for DSPG\n\nprint(\n  \"I'll be using this code as a demonstration\"\n)\n\n[1] \"I'll be using this code as a demonstration\"\n\n\n\nprint(\n  \"This will not print an output in my demonstration\"\n  )\n\n\npy = \"python\"\nprint(f\"This one is {py}\")\n\nThis one is python"
+    "objectID": "blog2023/WeekThree/Foods-Week-Three/Week3_WrapUp.html#works-in-progress",
+    "href": "blog2023/WeekThree/Foods-Week-Three/Week3_WrapUp.html#works-in-progress",
+    "title": "AI Local Foods Team Week Three Wrap Up",
+    "section": "Works in Progress",
+    "text": "Works in Progress\nAn excel sheet that contains a list of small businesses of Iowa grocers that we had to go through and find places that had the data we wanted.\n\n\nThese are some examples of what we were looking for\n\n\nAlong with some manual data scraping. We started work on some data scraping programs (spiders). This code block is a spider that I recently created. However, there are still some improvements that still need to be made.\n\nimport pandas as pd\nimport scrapy\nfrom scrapy.crawler import CrawlerProcess\nfrom scrapy.utils.log import configure_logging\n\nclass FreshThymeBaconSpider(scrapy.Spider):\n    name = 'Fresh Thyme Market Bacon Spider'\n\n    def start_requests( self ):\n        start_urls = ['https://ww2.freshthyme.com/sm/planning/rsid/951/results?q=Bacon&take=48&f=Category%3AHot+Dogs%2C+Bacon+%26+Sausage']\n        for url in start_urls:\n            yield scrapy.Request( url = url, callback = self.cardsParse)\n    \n    def cardsParse(self, response):\n        #Fail safe for links\n        try:\n            #grabs all cards from list and saves the link to follow\n            xpath = '//*[contains(@class,\"Listing\")]/div/a/@href'\n            listCards = response.xpath(xpath)\n            linklist.append(listCards.extract())\n            for url in listCards:\n                yield response.follow( url = url, callback = self.itemParse, meta={'link': url} )\n        except AttributeError:\n           pass\n    \n    def itemParse(self, response):\n        #xpaths to the name and price\n        nameXpath = '//*[contains(@class, \"PdpInfoTitle\")]/text()'\n        priceXpath = '//*[contains(@class, \"PdpMainPrice\")]/text()'\n        url = response.meta.get('link')\n        #Grabs the name and price from the xpaths and adds them to the bacon list\n        bacon.append({'bacon': response.xpath(nameXpath).extract(), 'price': response.xpath(priceXpath).extract()})\n\n# Start\nconfigure_logging()\nbacon = []\nlinklist = []\nprocess = CrawlerProcess()\nprocess.crawl(FreshThymeBaconSpider)\nprocess.start()\nprocess.stop()\nbaconFrame = pd.DataFrame(bacon)\nprint(baconFrame)\n\nThis image shows an example output of data we were able to scrape."
   },
   {
-    "objectID": "blog2023/WeekTwo/Harun-Celik-Week-Two/Harun-Celik-Week-Two.html",
-    "href": "blog2023/WeekTwo/Harun-Celik-Week-Two/Harun-Celik-Week-Two.html",
-    "title": "Week Two Blog",
+    "objectID": "blog2023/WeekThree/Foods-Week-Three/Week3_WrapUp.html#dspg-questions",
+    "href": "blog2023/WeekThree/Foods-Week-Three/Week3_WrapUp.html#dspg-questions",
+    "title": "AI Local Foods Team Week Three Wrap Up",
+    "section": "DSPG Questions",
+    "text": "DSPG Questions\n\nAre there stores or market places that would be helpful for us to look into?\nIs anyone experienced in web scraping and if so there any advice that you have for us?"
+  },
+  {
+    "objectID": "blog2023/WeekThree/Grocery-Week-Three/Grocery-Week-Three.html",
+    "href": "blog2023/WeekThree/Grocery-Week-Three/Grocery-Week-Three.html",
+    "title": "Grocery Team Week Three Wrap Up",
     "section": "",
-    "text": "In the second week, we focused on using tidycensus to get better at using the API for our research.\nHere’s an example pulling the table for all the public commuters in Iowa.\n\nlibrary(tidycensus)\nlibrary(dplyr)\nlibrary(ggplot2)\nlibrary(sf)\n\n\ncommuters_all <- get_acs(year = 2021, \n                    geography = \"tract\",\n                    state = 19,\n                    variables = c(Total = \"B08006_011\", Male = \"B08006_028\", Female = \"B08006_045\"), \n                    geometry = TRUE)\n\n\ncommuters_all %>%\n  filter(estimate > 0) %>% as.data.frame() %>%\n  select(-\"GEOID\",-\"geometry\")\n\n                                         NAME variable estimate moe\n1        Census Tract 116, Scott County, Iowa    Total       12  17\n2        Census Tract 116, Scott County, Iowa   Female       12  17\n3     Census Tract 803, Cherokee County, Iowa    Total        1   2\n4     Census Tract 803, Cherokee County, Iowa     Male        1   2\n5  Census Tract 9605, Washington County, Iowa    Total        3   6\n6  Census Tract 9605, Washington County, Iowa     Male        3   6\n7        Census Tract 705, Sioux County, Iowa    Total        5  10\n8        Census Tract 705, Sioux County, Iowa     Male        5  10\n9      Census Tract 9601, Monona County, Iowa    Total        3   6\n10     Census Tract 9601, Monona County, Iowa     Male        3   6"
+    "text": "This week was primarily centered on clarifying the focus of our project, as well as on the retrieval of relevant sources of data. During the first part of the week, our group searched TidyCensus, the USDA and various other internet sources for data that could potentially be useful for whichever type of tool that we and our client decide on.\nAfter this, we met with our client and some of his associates at the the research park to discuss the direction of the project. We had them answer various questions on Mentimeter and showed them the list of datasets under consideration. They also gave us numerous suggestions about sources they were familiar with and told us that they would help grant us access to those of which were not immediately available to us.\nHere are some of the Mentimeter results from our meeting:\n\n\n\nAs we are wrapping up this week, we have now shifted our focus to compiling our selected data to our repository and filtering through sources that may not be as useful as others. We are continuing to think of ways to optimize this process, as well as remaining open to other sources of data or information that we have yet to discover. Here are some of the resources under consideration:"
+  },
+  {
+    "objectID": "blog2023/WeekThree/Grocery-Week-Three/Grocery-Week-Three.html#works-in-progress",
+    "href": "blog2023/WeekThree/Grocery-Week-Three/Grocery-Week-Three.html#works-in-progress",
+    "title": "Grocery Team Week Three Wrap Up",
+    "section": "Works in Progress",
+    "text": "Works in Progress"
+  },
+  {
+    "objectID": "blog2023/WeekThree/Grocery-Week-Three/Grocery-Week-Three.html#aaron",
+    "href": "blog2023/WeekThree/Grocery-Week-Three/Grocery-Week-Three.html#aaron",
+    "title": "Grocery Team Week Three Wrap Up",
+    "section": "Aaron",
+    "text": "Aaron\nThis week has been less coding-centric than the previous week, as many of our efforts have been centered on uncovering useful sources of data. However, I have tried to work through ways to accelerate the time-consuming process of labeling and pushing CSVs of tables of ACS data.\nHere is a function that I’ve been using to speed the process up. It’s a data labeler function that takes “table”, “year” and “geography as arguments and outputs a labelled ACS5 data table by joining labels from the”load_variables()” function in TidyCensus by the common variable code on both dataframes.\n\nlibrary(dplyr)\n\n\nAttaching package: 'dplyr'\n\n\nThe following objects are masked from 'package:stats':\n\n    filter, lag\n\n\nThe following objects are masked from 'package:base':\n\n    intersect, setdiff, setequal, union\n\nlibrary(tidycensus)\nlibrary(stringr)\nlibrary(readr)\n\n\n\ndata_labeler_Iowa <- function(table, year, geography){\n  df <- tidycensus::get_acs(geography = geography,\n                table = table,\n                state = \"IA\",\n                year = year,\n                survey = \"acs5\")\n  \n  \n  vars <- tidycensus::load_variables(year, \"acs5\")\n  \n  vars <- vars %>%\n    dplyr::filter(stringr::str_detect(name, table))\n  \n  vars <- vars %>% \n    dplyr::rename(variable = name)\n  \n  vars <- vars %>%\n    dplyr::select(variable, label)\n  \n  df2 <- merge(df,vars)\n  \n  df2 %>%\n    dplyr::arrange(GEOID)\n}\n\nMedian_Household_Income_County_2021 <- data_labeler_Iowa(\"B19013\", 2021, \"county\")\n\nGetting data from the 2017-2021 5-year ACS\n\n\nLoading ACS5 variables for 2021 from table B19013. To cache this dataset for faster access to ACS tables in the future, run this function with `cache_table = TRUE`. You only need to do this once per ACS dataset.\n\n\n\nhead(Median_Household_Income_County_2021)\n\n    variable GEOID                   NAME estimate  moe\n1 B19013_001 19001     Adair County, Iowa    57944 4047\n2 B19013_001 19003     Adams County, Iowa    57981 7853\n3 B19013_001 19005 Allamakee County, Iowa    59461 2644\n4 B19013_001 19007 Appanoose County, Iowa    46900 5645\n5 B19013_001 19009   Audubon County, Iowa    54643 5861\n6 B19013_001 19011    Benton County, Iowa    72334 3626\n                                                                                         label\n1 Estimate!!Median household income in the past 12 months (in 2021 inflation-adjusted dollars)\n2 Estimate!!Median household income in the past 12 months (in 2021 inflation-adjusted dollars)\n3 Estimate!!Median household income in the past 12 months (in 2021 inflation-adjusted dollars)\n4 Estimate!!Median household income in the past 12 months (in 2021 inflation-adjusted dollars)\n5 Estimate!!Median household income in the past 12 months (in 2021 inflation-adjusted dollars)\n6 Estimate!!Median household income in the past 12 months (in 2021 inflation-adjusted dollars)\n\n\nBuilding on this, I tried to iterate through all of these arguments by using nested for loops and writing csvs automatically. However, for a reason I don’t entirely understand, I haven’t gotten it to work the way I should. It’s possible that this has to do with the limitations of the API call and its speed within the loop.\n\nyearlist <- c(2009, 2012, 2016, 2021)\ngeo_list <- c(\"county\", \"tract\")\nIncome_table_list <- c(\"B19013\", \"B19113\", \"B19202\", \"B19051\", \"B19055\")\nacs_table <- NULL\n\n\nfor(table in Income_table_list)\n\n  for(year in yearlist)\n  \n    for(geography in geo_list)\n    \n      acs_table <- tidycensus::get_acs(geography = geography,\n                                       table = table,\n                                       state = \"IA\",\n                                       year = year,\n                                       survey = \"acs5\")\n      \n      write_csv(acs_table, file = sprintf(\"%s_%s_%s\", table, year, geography))\n\nHowever, even if this didn’t completely work, I learned a lot of useful information, such as the “sprintf” function that provides placeholders for strings that are named from iterating variables in loop, as well as how to call only necessary elements of a library into a function to prevent using too much memory/slowing run time."
+  },
+  {
+    "objectID": "blog2023/WeekThree/Grocery-Week-Three/Grocery-Week-Three.html#alex",
+    "href": "blog2023/WeekThree/Grocery-Week-Three/Grocery-Week-Three.html#alex",
+    "title": "Grocery Team Week Three Wrap Up",
+    "section": "Alex",
+    "text": "Alex\n\nData Exploration\nI spent a lot of time this week doing data exploration. I found the USDA food atlas data set, as well as the Economic Census data. I also explored the TinyUSDA package.\n\n\nClient Meeting\nThis week I met with our clients, where we clarified the scope of the project, discussed the goals moving forwards, and shared our progress. I shared about the USDA food atlas and Economic Census data sets\n\n\nSQL learning\nThis week I spent time learning PostgreSQL on DataCamp. I also did several other courses related to data visualizations and fundamental statistical skills."
+  },
+  {
+    "objectID": "blog2023/WeekThree/Grocery-Week-Three/Grocery-Week-Three.html#srika",
+    "href": "blog2023/WeekThree/Grocery-Week-Three/Grocery-Week-Three.html#srika",
+    "title": "Grocery Team Week Three Wrap Up",
+    "section": "Srika",
+    "text": "Srika\n\nTraining:\n\nData Camp courses completed:\nIntroduction to statistics in R\nData visualization with R (in progress)\n\n\n\nCreated summaries of the client reports:\nUnderstanding the market trends and margins for different departments in a rural grocery store.\n\n\nCollected some ACS Data\nBrowsed for other possible useful sources to consider"
+  },
+  {
+    "objectID": "blog2023/WeekThree/Grocery-Week-Three/Grocery-Week-Three.html#dspg-questions",
+    "href": "blog2023/WeekThree/Grocery-Week-Three/Grocery-Week-Three.html#dspg-questions",
+    "title": "Grocery Team Week Three Wrap Up",
+    "section": "DSPG Questions",
+    "text": "DSPG Questions\n\nWhat is the best way to scrape text off of a webpage with R?\nWhat are some general rules/best practices for writing efficient and reliable functions?\nWhat is differential privacy?"
+  },
+  {
+    "objectID": "blog2023/WeekThree/Housing-Week-Three/Housing-Week-Three.html",
+    "href": "blog2023/WeekThree/Housing-Week-Three/Housing-Week-Three.html",
+    "title": "Housing Team Week Three Wrap Up",
+    "section": "",
+    "text": "This week, our team was able to spend time thinking and talking about:\n\nOur takeaways from last week’s client meeting\nProject goals\nMethods to use when working to reach project goals\nNew ideas for our project\n\n\n\n\nA rough plan for our project.\n\n\n\n\n\nWeb Scraping in R\nIntermediate R\n\n\n\n\nWe are currently trying to scrape data from housing assessor websites such as Iowa Assessors (data from Beacon and Vanguard) and Trulia. If we are able to successfully do so, images of houses and other information can be utilized to train our AI model(s).\nKailyn, Gavin and I (Angelina) focused on learning more about web scraping using R through the DataCamp Course called Web Scraping in R. We also began to follow steps for scraping the web using other tutorials.\n\n\n\nTo get an idea of how to use AI for the project, a sample model was trained to determine if a house has vegetation or no vegetation. About 750 images in total were used to train, validate and test the model.\nThe model was successfully trained and process did not take long.\n\n\n\n\n\n\n\n\n\n\n\nCreation of AI model was quicker than anticipated. We can spend more time into other aspects of the project (ex. data collection).\nKailyn was able to set up her blog!\nWe now have a better idea of the project’s methods and goals.\n\n\n\n\n\nStarting the web scraping process. When it comes to web scraping, we need to understand more than what the DataCamp course was teaching.\n\n\n\n\n\nGet a rough database running with housing info. We may be able to utilize a web interface that will allow us to more efficiently filter through houses.\nFamiliarize ourselves with web scraping.\nMeet with client(s) to show the project’s progress.\nFinish scraping data for Independence, Slater, New Hampton, Grundy Center, or other cities if needed.\n\n\n\n\nHow many of you have some web scraping experience?"
+  },
+  {
+    "objectID": "blog2023/WeekTwo/Foods-Week-Two/Foods-Week-Two.html",
+    "href": "blog2023/WeekTwo/Foods-Week-Two/Foods-Week-Two.html",
+    "title": "AI Local Foods Team Week Two Wrap Up",
+    "section": "",
+    "text": "Completed Team exercise on first day. Analyzed the areas where each team member was proficient in and the areas where we need to work on.\nTeam members started working on datacamp. Special shout out to Aaron for being the datacamp champ of our group!\nAttended meeting with Courtney Long to discuss project expectations and also clarified questions regarding the project\n\n\n\n\nNone in progress for Week 1 except datacamp. Outputs of first exercise attached below.\n\n\n\n\n\n\nTreat this section as a place to put all of the different questions that team members have about the work they’ve been completing so far. This can be things like;\n\nHow to best create a certain plot.\nWhat package/module might be the best fit for the task.\nAn idea that can be discussed with the larger group for additional thoughts."
+  },
+  {
+    "objectID": "blog2023/WeekTwo/Grocery-Week-Two/Grocery-Week_Two.html",
+    "href": "blog2023/WeekTwo/Grocery-Week-Two/Grocery-Week_Two.html",
+    "title": "Grocery Team Week Two Wrap Up",
+    "section": "",
+    "text": "Gather Data\nStart making basic visualizations\nData Camp\nResearched project"
+  },
+  {
+    "objectID": "blog2023/WeekTwo/Grocery-Week-Two/Grocery-Week_Two.html#works-in-progress",
+    "href": "blog2023/WeekTwo/Grocery-Week-Two/Grocery-Week_Two.html#works-in-progress",
+    "title": "Grocery Team Week Two Wrap Up",
+    "section": "Works in Progress",
+    "text": "Works in Progress\nThis week we practiced using the Tinycensus package, and we looked into data that we found interesting, but the data could be used in our final project.\nThis week we looked at where non-English languages are spoken, which can show if we would need to staff stores with speakers of other languages. We looked at income to see if stores need to prioritize competitive pricing in certain counties."
+  },
+  {
+    "objectID": "blog2023/WeekTwo/Grocery-Week-Two/Grocery-Week_Two.html#vacancy-plot-decennial-2020",
+    "href": "blog2023/WeekTwo/Grocery-Week-Two/Grocery-Week_Two.html#vacancy-plot-decennial-2020",
+    "title": "Grocery Team Week Two Wrap Up",
+    "section": "Vacancy Plot (Decennial, 2020):",
+    "text": "Vacancy Plot (Decennial, 2020):\n\nIowa_Places %>%\n  ggplot(aes(x = NAME)) +\n  geom_col(aes(y = total_percent, fill = \"Occupied\"), width = 0.8) + \n  geom_col(aes(y = percent, fill = \"Vacant\"), width = 0.8) +\n  coord_flip()\n\n\n\n\n\nThis is a graph representing the percentage of vacant housing units per location for both the counties and their respective cities. Slater City has the lowest percentage of vacancies while New Hampton City has the highest."
+  },
+  {
+    "objectID": "blog2023/WeekTwo/Grocery-Week-Two/Grocery-Week_Two.html#mode-of-transport-plot-acs5-2021",
+    "href": "blog2023/WeekTwo/Grocery-Week-Two/Grocery-Week_Two.html#mode-of-transport-plot-acs5-2021",
+    "title": "Grocery Team Week Two Wrap Up",
+    "section": "Mode of Transport Plot (ACS5, 2021):",
+    "text": "Mode of Transport Plot (ACS5, 2021):\n\nplot_1 <- transport_small %>%\n  ggplot(aes(fill = variable, x = county, y = estimate)) +\n  geom_bar(stat = \"identity\", position = \"fill\") +\n  coord_flip() + \n  ggtitle(\"Mode of Transport to Work\")\n\nplot_2 <- transport_small %>%\n  filter(variable != \"Automobile\") %>%\n  ggplot(aes(fill = variable, x = county, y = estimate)) +\n  geom_bar(stat = \"identity\", position = \"fill\") +\n  coord_flip() +\n  ggtitle(\"Mode of Transport to Work (Other than Automobile)\")\n\nplot_1\n\n\n\n\n\nThis is a plot of the reported mode of transport to work for each of the 4 counties. Commute by automobile overwhelmingly predominates.\n\n\nplot_2\n\n\n\n\n\nThis is a plot of the reported mode of transport for each county with automobile excluded. In two of the counties, “walking” is the majority response."
+  },
+  {
+    "objectID": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html",
+    "href": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html",
+    "title": "Housing Team Week Two Wrap Up",
+    "section": "",
+    "text": "Project is more planned out\nPersonal and team Blogs are mostly created\nHalf of backup data is uploaded to GitHub"
+  },
+  {
+    "objectID": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html#happies",
+    "href": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html#happies",
+    "title": "Housing Team Week Two Wrap Up",
+    "section": "Happies",
+    "text": "Happies\nWe are in the lead for team datacamp points at about 90k total\nBlogs:\nAngelina\nGavin\nKailyn"
+  },
+  {
+    "objectID": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html#crappies",
+    "href": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html#crappies",
+    "title": "Housing Team Week Two Wrap Up",
+    "section": "Crappies",
+    "text": "Crappies\nThe Blogs are difficult to work with and get set up"
+  },
+  {
+    "objectID": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html#cool-technical-things-we-learned-this-week",
+    "href": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html#cool-technical-things-we-learned-this-week",
+    "title": "Housing Team Week Two Wrap Up",
+    "section": "Cool Technical Things We Learned This Week",
+    "text": "Cool Technical Things We Learned This Week\nHow to created webpages in R studio\nMore basics in R such as making matrices\n\n\n\n\n\nMatrices\n\n\nHow to use Tidycensus for importing variable codes\n\n\n\n\n\nVariable Loading\n\n\nPractice with GitHub"
+  },
+  {
+    "objectID": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html#tidycensus-graphs",
+    "href": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html#tidycensus-graphs",
+    "title": "Housing Team Week Two Wrap Up",
+    "section": "Tidycensus Graphs",
+    "text": "Tidycensus Graphs\n\n\n\n\n\nKailyn\n\n\n\n\n\n\n\nGavin\n\n\n\n\n\n\n\nKailyn\n\n\n\n\n\n\n\nAngelina\n\n\n\n\n\n\n\nKailyn\n\n\n\n\n\n\n\nGavin"
+  },
+  {
+    "objectID": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html#random-facts-for-chris",
+    "href": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html#random-facts-for-chris",
+    "title": "Housing Team Week Two Wrap Up",
+    "section": "Random Facts for Chris",
+    "text": "Random Facts for Chris\nFrom statistic brain research institute, “…in an average hour, there are over 61,000 Americans airborne over the United States.”\nEvery second, 75 McDonalds burgers are eaten\nIn 1890, the Hollerith Machine was used to tabulate Census data. Technically, this could be called the first computer device."
+  },
+  {
+    "objectID": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html#questions-discussion",
+    "href": "blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html#questions-discussion",
+    "title": "Housing Team Week Two Wrap Up",
+    "section": "Questions/ Discussion",
+    "text": "Questions/ Discussion\nUnrelated from work - what do people do here during the summer?"
   },
   {
     "objectID": "index.html",

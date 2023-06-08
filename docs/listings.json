@@ -2,8 +2,12 @@
   {
     "listing": "/allBlogs.html",
     "items": [
-      "/blog2023/WeekTwo/Harun-Celik-Week-Two/Harun-Celik-Week-Two.html",
-      "/blog2023/WeekOne/Harun-Celik-Week-One/HarunCelikWeekOne.html"
+      "/blog2023/WeekThree/Foods-Week-Three/Week3_WrapUp.html",
+      "/blog2023/WeekThree/Grocery-Week-Three/Grocery-Week-Three.html",
+      "/blog2023/WeekThree/Housing-Week-Three/Housing-Week-Three.html",
+      "/blog2023/WeekTwo/Housing-Week-Two/Housing-Week-Two.html",
+      "/blog2023/WeekTwo/Foods-Week-Two/Foods-Week-Two.html",
+      "/blog2023/WeekTwo/Grocery-Week-Two/Grocery-Week_Two.html"
     ]
   }
 ]

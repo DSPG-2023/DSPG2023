@@ -1,0 +1,78 @@
+---
+title: "Housing Team Week Three Wrap Up"
+author: "Angelina Evans"
+date: "2023-05-31"
+categories: ["Week Three", "Housing Team"]
+---
+
+# Housing Team Week 3 Wrap-Up
+
+## Project Progress
+
+This week, our team was able to spend time thinking and talking about:
+
+-   Our takeaways from last week's client meeting
+
+-   Project goals
+
+-   Methods to use when working to reach project goals
+
+-   New ideas for our project
+
+![A rough plan for our project.](projectPlan.jpg)
+
+### DataCamp Courses Completed
+
+-   Web Scraping in R
+
+-   Intermediate R
+
+### Web Scraping
+
+We are currently trying to scrape data from housing assessor websites such as [Iowa Assessors](https://iowaassessors.com/) (data from Beacon and Vanguard) and [Trulia](https://www.trulia.com/). If we are able to successfully do so, images of houses and other information can be utilized to train our AI model(s).
+
+Kailyn, Gavin and I (Angelina) focused on learning more about web scraping using R through the DataCamp Course called *Web Scraping in R*. We also began to follow steps for scraping the web using other tutorials.
+
+### AI Modeling: Vegetation Model
+
+To get an idea of how to use AI for the project, a sample model was trained to determine if a house has vegetation or no vegetation. About 750 images in total were used to train, validate and test the model.
+
+The model was successfully trained and process did not take long.
+
+![](image1.jpg)
+
+![](image2.jpg)
+
+![](image3.jpg)
+
+![](image4.jpg)
+
+![](image5.jpg)
+
+![](image6.jpg)
+
+## Happies
+
+-   Creation of AI model was quicker than anticipated. We can spend more time into other aspects of the project (ex. data collection).
+
+-   Kailyn was able to set up her blog!
+
+-   We now have a better idea of the project's methods and goals.
+
+## Crappies
+
+-   Starting the web scraping process. When it comes to web scraping, we need to understand more than what the DataCamp course was teaching.
+
+## Some Plans for Next Week
+
+-   Get a rough database running with housing info. We may be able to utilize a web interface that will allow us to more efficiently filter through houses.
+
+-   Familiarize ourselves with web scraping.
+
+-   Meet with client(s) to show the project's progress.
+
+-   Finish scraping data for Independence, Slater, New Hampton, Grundy Center, or other cities if needed.
+
+## Questions
+
+How many of you have some web scraping experience?

@@ -1,6 +1,6 @@
 ---
 title: "AI Local Foods Team Week Three Wrap Up"
-author: "Aaron C"
+author: "Aaron Case"
 date: "2023-06-02"
 categories: ["Week Three", "Local Foods Team"]
 ---

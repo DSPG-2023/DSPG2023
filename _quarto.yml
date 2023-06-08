@@ -15,7 +15,7 @@ website:
 
 format:
   html:
-    theme: cosmo
+    theme: [simplex, theme-simplex.scss]
     css: styles.css
     toc: true
 

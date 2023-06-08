@@ -1,1 +1,0 @@
-# RAKESH SHAH

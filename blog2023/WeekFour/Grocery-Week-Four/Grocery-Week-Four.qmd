@@ -1,6 +1,6 @@
 ---
 title: "Grocery Team Week Four Wrap Up"
-authors: "Srika Raja"
+author: "Srika Raja"
 date: "2023-06-08"
 categories: ["Week Four", "Grocery Team"]
 ---

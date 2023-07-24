@@ -11,7 +11,21 @@
     "href": "allBlogs.html",
     "title": "Blogs",
     "section": "",
-    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJun 15, 2023\n\n\nGrocery Team Week Five Wrap Up\n\n\nAlex Cory\n\n\n\n\nJun 15, 2023\n\n\nHousing Team Recap Week Five\n\n\nGavin D. Fisher\n\n\n\n\nJun 9, 2023\n\n\nHousing Team Week Four Wrap Up\n\n\nKailyn Hogan\n\n\n\n\nJun 8, 2023\n\n\nAI Local Foods Team Week Four Wrap Up\n\n\nPratham Jadhav\n\n\n\n\nJun 8, 2023\n\n\nGrocery Team Week Four Wrap Up\n\n\nSrika Raja\n\n\n\n\nJun 2, 2023\n\n\nAI Local Foods Team Week Three Wrap Up\n\n\nAaron Case\n\n\n\n\nJun 2, 2023\n\n\nGrocery Team Week Three Wrap Up\n\n\nAaron Null\n\n\n\n\nMay 31, 2023\n\n\nHousing Team Week Three Wrap Up\n\n\nAngelina Evans\n\n\n\n\nMay 25, 2023\n\n\nHousing Team Week Two Wrap Up\n\n\nGavin Fisher\n\n\n\n\nMay 24, 2023\n\n\nAI Local Foods Team Week Two Wrap Up\n\n\nDev Rokade\n\n\n\n\nMay 24, 2023\n\n\nGrocery Team Week Two Wrap Up\n\n\nAlex Cory\n\n\n\n\n\n\nNo matching items"
+    "text": "Order By\n       Default\n         \n          Date - Oldest\n        \n         \n          Date - Newest\n        \n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\n\nDate\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nJul 6, 2023\n\n\nHousing Team Recap Week Eight\n\n\nGavin D. Fisher\n\n\n\n\nJun 30, 2023\n\n\nHousing Team Week Seven Wrap Up\n\n\nKailyn Hogan\n\n\n\n\nJun 23, 2023\n\n\nHousing Team Week Six Wrap Up\n\n\nAngelina Evans\n\n\n\n\nJun 15, 2023\n\n\nGrocery Team Week Five Wrap Up\n\n\nAlex Cory\n\n\n\n\nJun 15, 2023\n\n\nHousing Team Recap Week Five\n\n\nGavin D. Fisher\n\n\n\n\nJun 9, 2023\n\n\nHousing Team Week Four Wrap Up\n\n\nKailyn Hogan\n\n\n\n\nJun 8, 2023\n\n\nAI Local Foods Team Week Four Wrap Up\n\n\nPratham Jadhav\n\n\n\n\nJun 8, 2023\n\n\nGrocery Team Week Four Wrap Up\n\n\nSrika Raja\n\n\n\n\nJun 2, 2023\n\n\nAI Local Foods Team Week Three Wrap Up\n\n\nAaron Case\n\n\n\n\nJun 2, 2023\n\n\nGrocery Team Week Three Wrap Up\n\n\nAaron Null\n\n\n\n\nMay 31, 2023\n\n\nHousing Team Week Three Wrap Up\n\n\nAngelina Evans\n\n\n\n\nMay 25, 2023\n\n\nHousing Team Week Two Wrap Up\n\n\nGavin Fisher\n\n\n\n\nMay 24, 2023\n\n\nAI Local Foods Team Week Two Wrap Up\n\n\nDev Rokade\n\n\n\n\nMay 24, 2023\n\n\nGrocery Team Week Two Wrap Up\n\n\nAlex Cory\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog2023/WeekEight/Housing-Week-Eight/House_Week_Eight.html",
+    "href": "blog2023/WeekEight/Housing-Week-Eight/House_Week_Eight.html",
+    "title": "Housing Team Recap Week Eight",
+    "section": "",
+    "text": "Shortened blog this week.\n\n\n\nFinished editing demographic profile plots\nState, regional, and national context added to graphs\nAdded percentages to some of the graphs\n\n\n\n\n\n\nCreated house attribute quality dashboards\nMade a guide on how to create the maps\nPlan to make graphs on AI model accuracy vs actual house quality\n\n\n\n\n\n\nThanks to Aaron’s spider, Beacon images were added to the Independence database evaluation\nSHAP model works on our own datasets (Sadat fixed the code)\nPlan to have SHAP models for each attribute to visualize how well the models are preforming\n\n\n\n\n\n\n\nFinish demographic analysis for Iowa communities\nGraph AI confidence vs accuracy\nImplement SHAP models into program (and hopefully CAM too!)"
+  },
+  {
+    "objectID": "blog2023/WeekEight/Housing-Week-Eight/House_Week_Eight.html#ai-housing-week-eight-recap",
+    "href": "blog2023/WeekEight/Housing-Week-Eight/House_Week_Eight.html#ai-housing-week-eight-recap",
+    "title": "Housing Team Recap Week Eight",
+    "section": "",
+    "text": "Shortened blog this week.\n\n\n\nFinished editing demographic profile plots\nState, regional, and national context added to graphs\nAdded percentages to some of the graphs\n\n\n\n\n\n\nCreated house attribute quality dashboards\nMade a guide on how to create the maps\nPlan to make graphs on AI model accuracy vs actual house quality\n\n\n\n\n\n\nThanks to Aaron’s spider, Beacon images were added to the Independence database evaluation\nSHAP model works on our own datasets (Sadat fixed the code)\nPlan to have SHAP models for each attribute to visualize how well the models are preforming\n\n\n\n\n\n\n\nFinish demographic analysis for Iowa communities\nGraph AI confidence vs accuracy\nImplement SHAP models into program (and hopefully CAM too!)"
   },
   {
     "objectID": "blog2023/WeekFive/Grocery-Week-Five/Grocery_Week_Five.html",
@@ -96,6 +110,97 @@
     "title": "Housing Team Week Four Wrap Up",
     "section": "Future Plans and Next Steps",
     "text": "Future Plans and Next Steps\nOnce we are able to scrape enough images off of Zillow, Realtors.com, and the assessor pages, we will be able to move on with creating AI Models. The diagram below outlines how the AI Models will work in the next steps of out project."
+  },
+  {
+    "objectID": "blog2023/WeekSeven/Housing-Week-Seven/Housing_Week_Seven.html",
+    "href": "blog2023/WeekSeven/Housing-Week-Seven/Housing_Week_Seven.html",
+    "title": "Housing Team Week Seven Wrap Up",
+    "section": "",
+    "text": "For more detailed information on what each member of the housing team has accomplished thus far, check out their individual blog pages. Links are embedded in their specific sections."
+  },
+  {
+    "objectID": "blog2023/WeekSeven/Housing-Week-Seven/Housing_Week_Seven.html#week-seven-for-the-housing-team",
+    "href": "blog2023/WeekSeven/Housing-Week-Seven/Housing_Week_Seven.html#week-seven-for-the-housing-team",
+    "title": "Housing Team Week Seven Wrap Up",
+    "section": "",
+    "text": "For more detailed information on what each member of the housing team has accomplished thus far, check out their individual blog pages. Links are embedded in their specific sections."
+  },
+  {
+    "objectID": "blog2023/WeekSeven/Housing-Week-Seven/Housing_Week_Seven.html#final-presentation-outline",
+    "href": "blog2023/WeekSeven/Housing-Week-Seven/Housing_Week_Seven.html#final-presentation-outline",
+    "title": "Housing Team Week Seven Wrap Up",
+    "section": "Final Presentation Outline",
+    "text": "Final Presentation Outline\n\n\n\n\n\n\n\n\nSPEAKER\nSECTION\nTIME\n\n\nMorenike\n Introduction\n\nOverview of the project objectives and goals\nImportance of data collection and analysis in real estate and community analysis\n\n2 min\n\n\nAngelina and Kailyn\nData Collection\nScraping from Beacon and Vanguard\n\nBrief explanation of Beacon and Vanguard as data sources\nScraping process\nImportance of obtaining accurate and reliable data from these sources\n\nAddress Cleaning and Google Links\n\nAddress cleaning and standardization techniques\nUtilizing Google links for Google Street View image retrieval\nReasons for having accurate and complete address data\nScraping from Google Street View\nExtracting street view images for AI model use\nTechniques used for automated data extraction from Google Street View\n\nScraping from Zillow\n\nIntroduction to Zillow as a real estate data source\nExtracting relevant property data from Zillow\nChallenges and limitations of scraping from Zillow\n\n5 min\n\n\nGavin\nAngelina and Kailyn on Manual Image Sorting\nAI Model Creation\nOnly displaying images for one of the models. Note in presentation the ones that do exist, but we are using only one model to refine presentation.\nManual Image Sorting to Train Models\n\nTechniques used for organizing and categorizing the obtained images\nPurpose of image sorting\n\nBuilding AI Models (Binary and Multiple)\n\nKeras and Tensorflow Libraries\nRefining image data\nAI has to be able to easily read the images\nIdentify Labels (Binary vs. Multiple)\nSplit Training, Testing, and Evaluating Data\nBuild Layers\nTrain the AI Models\nEvaluate\nExport\n\n10 min\n\n\nGavin\nThe Thing Gavin Made that Writes to a CSV\n8 min\n\n\nKailyn\nDemographic Analysis and Profiling\nSelect Communities\n\nKey findings and insights regarding population, age groups, etc.\n\nAll Iowa Communities\n\nOverview of the demographic analysis methodology\nComparative analysis of Iowa communities based on demographic factors\nVisualization techniques used to present the analysis results\n\n6 min\n\n\nAngelina\nVisualizing Housing Quality Data from AI Model Outputs (with GIS?)\nGeocoding Addresses\n\nExplanation of geocoding process and its importance\nComparison of geocoding in R\nEvaluation of advantages and limitations of each geocoding approach\n\nMapping AI Model data\n\nApplication of spatial data for visualizing and analyzing house quality\nTechniques used for representing house quality on maps\nInterpretation and insights gained from geographical Analysis of house quality\n\n6 min\n\n\nMorenike\nConclusion\n\nSummary of the project workflow and key findings\nLessons learned and challenges encountered\nFuture possibilities and areas for further improvement\n\n2 min\n\n\n\nQuestions\n10 min"
+  },
+  {
+    "objectID": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html",
+    "href": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html",
+    "title": "Housing Team Week Six Wrap Up",
+    "section": "",
+    "text": "New Hampton records in the Fulcrum app.\n\n\nOn Monday and Tuesday of week six, the DSPG group traveled to Grundy Center, New Hampton and Independence, Iowa. In groups of 3-4 people, we walked around residential areas and observed the condition of houses and lots. The Fulcrum app was used to record observations. We assigned good, fair and poor ratings to characteristics such as: Roof, gutter, landscape, siding, and sidewalk to the house.\n\n\n\n\n\nWhile in residential neighborhoods, we also gave general impressions of blocks by observing presence and quality of: neighborhood sidewalks, street lights, way-finding signs, storm drainage systems, curb cuts and street trees.\n\n\n\nOne of the goals of the project has been to provide demographic profiles of three cities: Independence, New Hampton and Grundy Center. We want to show characteristics related to economics, housing and population, and how these characteristics have been changing through the years or how they are expected to change in the future. Several graphs were made in R.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nSo far, all models needed have been implemented! The accuracy will continue to improve the more they are trained. Now what is needed is a way to get the model outputs into a format that is useful for us. We need to write the outputs to a csv file. The script below is used to write to a CSV file in the correct attribute column based on the address being evaluated.\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nOne of our clients wishes to see something related to the project in the form of maps. One idea is to use maps to display well-trained AI model ratings for landscapes, siding, gutters etc. This will allow us and our clients to visualize where houses in good condition are versus lower condition.\nTo visualize addresses for the WinVEST cities and Slater, first we needed to geocode them (get a latitude and longitude for each address). Base code was from storybench.\n\n\n\n\n\n\n\n\n\n\nAddresses are plotted in QGIS using the coordinates. There are some addresses that are not in the correct place (highlighted below). This is something to look into next week.\n\n\n\n\n\n\n\nA sample map was created in which gutter quality for houses in the city are shown.\n\n\n\nLegend is still in progress. The darkest orange is “poor”, lighter orange is “fair”, and the blue is “good”.\n\n\n\n\n\n\nOn Thursday we met online with Tara Brueggeman, an Assessor for Mason City, and Erin Mullenix, one of our clients. We learned many things from this meeting. These are our main takeaways:\n\nThe data provided by Beacon and Vanguard is public but we are not able to web scrape. However, city and county assessor offices can get some data from Vanguard:\n\nA city/county assessor office has access to the Vanguard assessment data management system. Technically, they can run some customized reports on the data using SQL but many offices, especially in smaller IA communities, don’t know how to get data from the system using SQL.\n\nWe learned about the appraisal process Tara and her team follow:\n\nAppraisal starts with the use of a blueprint. Find information on number of bedrooms and bathrooms, square footage, and details on basement.\nAppraiser goes to the house to measure and inspect in-person. They used to go inside houses more often, but now homeowners are less comfortable with that. It does help to take a look at the inside of houses, especially because the inside does not always match blueprint. However, the condition of the exterior is usually a good indicator of the condition of the interior.\n\nTara will provide us with Iowa Real Property appraisal manual, which is is given to assessors. This may be useful for us because we could get better ideas of how different characteristics of a house are assessed.\nHow they aim to minimize bias when assessing?\n\nNo assessing when hungover, having a bad day, or if it’s raining outside.\nThe records are reviewed by another person before being finalized.\n\n\n\n\n\nAs we get down to the last few weeks, we are beginning to finish up major project tasks.\n\n\n\nIt’s taking a while to figure out how to write the model’s ratings to a csv file both effectively and efficiently.\n\n\n\n\nMeet with Erin Olsen-Douglas and Erin Mullenix (our clients) to give an update on what we have accomplished since last meeting. We plan to come prepared with several questions.\nCreate a teaser video and slides for our project.\nFinish script that will allow us to have the model’s outputs in a csv file.\nUse files to visualize the quality of houses.\nFurther train the models using new images of houses in Des Moines.\n\n\n\n\nWhat was the weirdest or most shocking conversation you had with a resident while collecting data?"
+  },
+  {
+    "objectID": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#winvest-project",
+    "href": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#winvest-project",
+    "title": "Housing Team Week Six Wrap Up",
+    "section": "",
+    "text": "New Hampton records in the Fulcrum app.\n\n\nOn Monday and Tuesday of week six, the DSPG group traveled to Grundy Center, New Hampton and Independence, Iowa. In groups of 3-4 people, we walked around residential areas and observed the condition of houses and lots. The Fulcrum app was used to record observations. We assigned good, fair and poor ratings to characteristics such as: Roof, gutter, landscape, siding, and sidewalk to the house.\n\n\n\n\n\nWhile in residential neighborhoods, we also gave general impressions of blocks by observing presence and quality of: neighborhood sidewalks, street lights, way-finding signs, storm drainage systems, curb cuts and street trees."
+  },
+  {
+    "objectID": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#demographic-profiles",
+    "href": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#demographic-profiles",
+    "title": "Housing Team Week Six Wrap Up",
+    "section": "",
+    "text": "One of the goals of the project has been to provide demographic profiles of three cities: Independence, New Hampton and Grundy Center. We want to show characteristics related to economics, housing and population, and how these characteristics have been changing through the years or how they are expected to change in the future. Several graphs were made in R."
+  },
+  {
+    "objectID": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#progress-on-ai-models",
+    "href": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#progress-on-ai-models",
+    "title": "Housing Team Week Six Wrap Up",
+    "section": "",
+    "text": "So far, all models needed have been implemented! The accuracy will continue to improve the more they are trained. Now what is needed is a way to get the model outputs into a format that is useful for us. We need to write the outputs to a csv file. The script below is used to write to a CSV file in the correct attribute column based on the address being evaluated."
+  },
+  {
+    "objectID": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#mapping",
+    "href": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#mapping",
+    "title": "Housing Team Week Six Wrap Up",
+    "section": "",
+    "text": "One of our clients wishes to see something related to the project in the form of maps. One idea is to use maps to display well-trained AI model ratings for landscapes, siding, gutters etc. This will allow us and our clients to visualize where houses in good condition are versus lower condition.\nTo visualize addresses for the WinVEST cities and Slater, first we needed to geocode them (get a latitude and longitude for each address). Base code was from storybench.\n\n\n\n\n\n\n\n\n\n\nAddresses are plotted in QGIS using the coordinates. There are some addresses that are not in the correct place (highlighted below). This is something to look into next week.\n\n\n\n\n\n\n\nA sample map was created in which gutter quality for houses in the city are shown.\n\n\n\nLegend is still in progress. The darkest orange is “poor”, lighter orange is “fair”, and the blue is “good”."
+  },
+  {
+    "objectID": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#meeting-with-mason-city-assessor",
+    "href": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#meeting-with-mason-city-assessor",
+    "title": "Housing Team Week Six Wrap Up",
+    "section": "",
+    "text": "On Thursday we met online with Tara Brueggeman, an Assessor for Mason City, and Erin Mullenix, one of our clients. We learned many things from this meeting. These are our main takeaways:\n\nThe data provided by Beacon and Vanguard is public but we are not able to web scrape. However, city and county assessor offices can get some data from Vanguard:\n\nA city/county assessor office has access to the Vanguard assessment data management system. Technically, they can run some customized reports on the data using SQL but many offices, especially in smaller IA communities, don’t know how to get data from the system using SQL.\n\nWe learned about the appraisal process Tara and her team follow:\n\nAppraisal starts with the use of a blueprint. Find information on number of bedrooms and bathrooms, square footage, and details on basement.\nAppraiser goes to the house to measure and inspect in-person. They used to go inside houses more often, but now homeowners are less comfortable with that. It does help to take a look at the inside of houses, especially because the inside does not always match blueprint. However, the condition of the exterior is usually a good indicator of the condition of the interior.\n\nTara will provide us with Iowa Real Property appraisal manual, which is is given to assessors. This may be useful for us because we could get better ideas of how different characteristics of a house are assessed.\nHow they aim to minimize bias when assessing?\n\nNo assessing when hungover, having a bad day, or if it’s raining outside.\nThe records are reviewed by another person before being finalized."
+  },
+  {
+    "objectID": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#things-that-went-well",
+    "href": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#things-that-went-well",
+    "title": "Housing Team Week Six Wrap Up",
+    "section": "",
+    "text": "As we get down to the last few weeks, we are beginning to finish up major project tasks."
+  },
+  {
+    "objectID": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#things-that-didnt-go-so-well",
+    "href": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#things-that-didnt-go-so-well",
+    "title": "Housing Team Week Six Wrap Up",
+    "section": "",
+    "text": "It’s taking a while to figure out how to write the model’s ratings to a csv file both effectively and efficiently."
+  },
+  {
+    "objectID": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#some-plans-for-next-week",
+    "href": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#some-plans-for-next-week",
+    "title": "Housing Team Week Six Wrap Up",
+    "section": "",
+    "text": "Meet with Erin Olsen-Douglas and Erin Mullenix (our clients) to give an update on what we have accomplished since last meeting. We plan to come prepared with several questions.\nCreate a teaser video and slides for our project.\nFinish script that will allow us to have the model’s outputs in a csv file.\nUse files to visualize the quality of houses.\nFurther train the models using new images of houses in Des Moines."
+  },
+  {
+    "objectID": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#questions",
+    "href": "blog2023/WeekSix/Housing-Week-Six/Housing_Week_Six.html#questions",
+    "title": "Housing Team Week Six Wrap Up",
+    "section": "",
+    "text": "What was the weirdest or most shocking conversation you had with a resident while collecting data?"
   },
   {
     "objectID": "blog2023/WeekThree/Foods-Week-Three/Week3_WrapUp.html",

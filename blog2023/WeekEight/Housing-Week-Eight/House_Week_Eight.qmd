@@ -1,5 +1,5 @@
 ---
-title: "Housing Team Recap Week Eight"
+title: "Housing Team Week Eight Wrap Up"
 author: "Gavin D. Fisher"
 date: "2023-07-06"
 categories: ["Week Eight", "Housing Team"]

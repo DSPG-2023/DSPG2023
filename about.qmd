@@ -1,10 +1,51 @@
 ---
-title: "About"
+title: "Project Participants"
 ---
 
-This page will contain information about participants.
+**Program Leader**
 
-```{r}
-# For now, just look at this line of code :)
-1 + 1
-```
+-   [Christopher J. Seeger](https://dspg.iastate.edu/people/christopher-seeger), Professor, Landscape Architecture; Extension Specialist in Geospatial Technologies
+
+**Project Advisers**
+
+-   Lisa Bates, Assistant Director, Community and Economic Development
+
+-   [Liesl Eathington](https://dspg.iastate.edu/people/liesl-eathington), Research Scientist III
+
+-   [Bailey Hanson](https://dspg.iastate.edu/people/bailey-hanson), Extension Specialist in Geospatial Technologies
+
+-   [Rakesh Shah](https://dspg.iastate.edu/people/rakesh-shah), Extension Specialist in Computer Science
+
+**Program Advisers**
+
+-   Adisak Sukul, Ph.D. Associate Teaching Professor
+
+-   Heike Hoffman, Professor
+
+-   Todd Abraham, Research Scientist
+
+**Graduate Fellows**
+
+-   Morenike Atejioye, Community and Regional Planning
+
+-   [Harun Çelik](https://dspg.iastate.edu/people/harun-%C3%A7elik), History and Graduate GIS Certificate
+
+-   Swati Kumari, Management Information Systems
+
+-   Mohammad Ahnaf Sadat, Industrial Engineering and Artificial Intelligence
+
+**Undergraduate Interns**
+
+-   Aaron Case, Computer Science
+
+-   Alex Cory, Data Science
+
+-   Angelina Evans, Geography (University of Iowa)
+
+-   Gavin Fisher, Computer Science and Data Science
+
+-   Kailyn Hogan, Community and Regional Planning
+
+-   Aaron Null, Linguistics and Data Science
+
+-   Srika Raja, Statistics and Data Science

@@ -2,9 +2,9 @@
   {
     "objectID": "about.html",
     "href": "about.html",
-    "title": "About",
+    "title": "Project Participants",
     "section": "",
-    "text": "This page will contain information about participants.\n\n# For now, just look at this line of code :)\n1 + 1\n\n[1] 2"
+    "text": "Program Leader\n\nChristopher J. Seeger, Professor, Landscape Architecture; Extension Specialist in Geospatial Technologies\n\nProject Advisers\n\nLisa Bates, Assistant Director, Community and Economic Development\nLiesl Eathington, Research Scientist III\nBailey Hanson, Extension Specialist in Geospatial Technologies\nRakesh Shah, Extension Specialist in Computer Science\n\nProgram Advisers\n\nAdisak Sukul, Ph.D. Associate Teaching Professor\nHeike Hoffman, Professor\nTodd Abraham, Research Scientist\n\nGraduate Fellows\n\nMorenike Atejioye, Community and Regional Planning\nHarun Çelik, History and Graduate GIS Certificate\nSwati Kumari, Management Information Systems\nMohammad Ahnaf Sadat, Industrial Engineering and Artificial Intelligence\n\nUndergraduate Interns\n\nAaron Case, Computer Science\nAlex Cory, Data Science\nAngelina Evans, Geography (University of Iowa)\nGavin Fisher, Computer Science and Data Science\nKailyn Hogan, Community and Regional Planning\nAaron Null, Linguistics and Data Science\nSrika Raja, Statistics and Data Science"
   },
   {
     "objectID": "allBlogs.html",
@@ -611,8 +611,22 @@
   {
     "objectID": "index.html",
     "href": "index.html",
-    "title": "Iowa State University - DSPG 2023",
+    "title": "Iowa State University DSPG 2023",
     "section": "",
-    "text": "This is a Quarto website hosting the projects and blogs from the 2023 Data Science for Public Good program at Iowa State University.\n\nprint(\"Welcome to Our Page!\")\n\n[1] \"Welcome to Our Page!\""
+    "text": "This Quarto website is an experimental page hosting project documentation through blogs for the 2023 Data Science for Public Good program at Iowa State University. The Blogs tab contains the documentation for each team’s work on a weekly basis. Week One is omitted since it was individual training and work beyond Week Eight is reflected in the final presentation blogs for each team.\nTo learn more about the program, follow the link to the Iowa State University DSPG Program."
+  },
+  {
+    "objectID": "index.html#introduction",
+    "href": "index.html#introduction",
+    "title": "Iowa State University DSPG 2023",
+    "section": "",
+    "text": "This Quarto website is an experimental page hosting project documentation through blogs for the 2023 Data Science for Public Good program at Iowa State University. The Blogs tab contains the documentation for each team’s work on a weekly basis. Week One is omitted since it was individual training and work beyond Week Eight is reflected in the final presentation blogs for each team.\nTo learn more about the program, follow the link to the Iowa State University DSPG Program."
+  },
+  {
+    "objectID": "index.html#projects",
+    "href": "index.html#projects",
+    "title": "Iowa State University DSPG 2023",
+    "section": "Projects",
+    "text": "Projects\n\nData-Driven Insights for Local Food Markets: AI, Pricing, and Crop Flow\nThis project explores artificial intelligence and data analysis tools to benefit local food farms. We developed a web-scraping tool, conducted data analysis, and developed a crop flow optimization model to maximize profit. The tools and insights obtained empower informed decision-making. Moreover, It serves as a precursor to future advancements in demand forecasting and crop\nmanagement for the local food industry.\nProject Sponsor: AI Institute for Resilient Agriculture (AIIRA)\nProject Leads: Rakesh Shah, Lisa Bates\nGraduate Fellows and Interns: Swati Kumari, Mohammad Ahnaf Sadat, Harun Celik, Aaron Case\nFinal Presentation Teaser: YouTube Video\nGitHub: Repository\nProject Blog Pages\nFinal Presentation Video: YouTube\n\n\nAI-Driven Housing Evaluation for Rural Community Development\nThe absence of a comprehensive assessment of housing quality in rural areas of Iowa hinders resource allocation and negatively impacts residents’ well-being and economic growth. To address these challenges, an A1-driven approach is proposed. By utilizing web scraping and AI models, housing features can be categorized as good or poor quality, enabling targeted investment strategies, and directing financial resources where they are most needed. This project aims to reduce biases, streamline housing evaluations, and inform decision-making for rural housing ivestment and development initiatives.\nProject Sponsor: AI Institute for Resilient Agriculture (AIIRA)\nProject Leads: Liesl Eathington, Christopher Seeger\nGraduate Fellows: Morenike Atejioye, Mohammad Ahnaf Sadat\nDSPG Interns: Kailyn Hogan, Angelina Evans, Gavin Fisher\nFinal Presentation Teaser: YouTube Video\nGitHub: Repository\nProject Blog Pages\nFinal Presentation Video: YouTube Video\n\n\nUsing Data to Inform Decision Making for Rural Grocery Stores\nThis DSPG project aims to develop a tool that will help provide users information on opening, inheriting, and operating grocery stores in their preferred rural location. Our work as the DSPGrocery package hosts the calculations used within an R Shiny application to perform dynamic calculations based on user-given inputs for estimating revenues and costs associated with opening a grocery store in a rural location.\nProject Sponsor: Agricultural Marketing Resource Center\nProject Leads: Bailey Hanson, Lisa Bates\nGraduate Fellow: Harun Celik\nDSPG Interns: Aaron Null, Srika Raja, Alex Cory\nFinal Presentation Teaser: YouTube Video\nGitHub: Repository\nProject Blog Pages\nFinal Presentation Video: YouTube"
   }
 ]

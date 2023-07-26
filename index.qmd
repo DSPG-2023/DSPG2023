@@ -1,7 +1,51 @@
 ---
-title: "Iowa State University's DSPG 2023"
+title: "Iowa State University DSPG 2023"
 ---
+
+## Introduction
 
 This Quarto website is an experimental page hosting project documentation through blogs for the 2023 Data Science for Public Good program at Iowa State University. The `Blogs` tab contains the documentation for each team's work on a weekly basis. Week One is omitted since it was individual training and work beyond Week Eight is reflected in the final presentation blogs for each team.
 
 To learn more about the program, follow the link to the [Iowa State University DSPG Program](https://dspg.iastate.edu/2023-projects).
+
+## Projects
+
+### Data-Driven Insights for Local Food Markets: AI, Pricing, and Crop Flow
+
+This project explores artificial intelligence and data analysis tools to benefit local food farms. We developed a web-scraping tool, conducted data analysis, and developed a crop flow optimization model to maximize profit. The tools and insights obtained empower informed decision-making. Moreover, It serves as a precursor to future advancements in demand forecasting and crop
+
+management for the local food industry.
+
+Project Sponsor: [AI Institute for Resilient Agriculture (AIIRA)](https://aiira.iastate.edu/)\
+Project Leads: Rakesh Shah, Lisa Bates\
+Graduate Fellows and Interns: Swati Kumari, Mohammad Ahnaf Sadat, Harun Celik, Aaron Case\
+Final Presentation Teaser: [YouTube Video](https://youtu.be/503T1TVQBOw)\
+GitHub: [Repository](https://github.com/DSPG-2023/Local-Food)\
+[Project Blog Pages](https://cyberspeedac.github.io/Aaron-Case-DSPG-Blog/posts/Aaron_C_FinalWeek/Presentation.html)\
+Final Presentation Video: [YouTube](https://youtu.be/TOaL3S7OD7c)
+
+### AI-Driven Housing Evaluation for Rural Community Development
+
+The absence of a comprehensive assessment of housing quality in rural areas of Iowa hinders resource allocation and negatively impacts residents' well-being and economic growth. To address these challenges, an A1-driven approach is proposed. By utilizing web scraping and AI models, housing features can be categorized as good or poor quality, enabling targeted investment strategies, and directing financial resources where they are most needed. This project aims to reduce biases, streamline housing evaluations, and inform decision-making for rural housing ivestment and development initiatives.
+
+Project Sponsor: [AI Institute for Resilient Agriculture (AIIRA)](https://aiira.iastate.edu/)\
+Project Leads: Liesl Eathington, Christopher Seeger\
+Graduate Fellows: Morenike Atejioye, Mohammad Ahnaf Sadat\
+DSPG Interns: Kailyn Hogan, Angelina Evans, Gavin Fisher\
+Final Presentation Teaser: [YouTube Video](https://youtu.be/WcaFzK84oGg)\
+GitHub: [Repository](https://github.com/DSPG-2023/Housing)\
+[Project Blog Pages](https://morenikeope.github.io/Atejioye_Blog/posts/Report_Draft/Report_Draft.htm-driven-housing-evaluation-for-rural-community-development)\
+Final Presentation Video: [YouTube Video](https://youtu.be/eTV1bZdbbuk)
+
+### Using Data to Inform Decision Making for Rural Grocery Stores
+
+This DSPG project aims to develop a tool that will help provide users information on opening, inheriting, and operating grocery stores in their preferred rural location. Our work as the [DSPGrocery](https://dspg-2023.github.io/Grocery/) package hosts the calculations used within an R Shiny application to perform dynamic calculations based on user-given inputs for estimating revenues and costs associated with opening a grocery store in a rural location.
+
+Project Sponsor: [Agricultural Marketing Resource Center](https://www.agmrc.org/)\
+Project Leads: Bailey Hanson, Lisa Bates\
+Graduate Fellow: Harun Celik\
+DSPG Interns: Aaron Null, Srika Raja, Alex Cory\
+Final Presentation Teaser: [YouTube Video](https://youtu.be/Kmk2p2xSZJk)\
+GitHub: [Repository](https://github.com/DSPG-2023/Grocery)\
+[Project Blog Pages](https://averagedocudramaenjoyer.github.io/Aaron-N-s-Blog/posts/Final_Presentatirocery/Final_Presentation_Grocery.html)\
+Final Presentation Video: [YouTube](https://youtu.be/AAqwdGrkWEs)

@@ -1,9 +1,7 @@
 ---
-title: "DSPG 2023"
+title: "Iowa State University's DSPG 2023"
 ---
 
-This is a Quarto website hosting the projects and blogs from the 2023 Data Science for Public Good program at Iowa State University.
+This Quarto website is an experimental page hosting project documentation through blogs for the 2023 Data Science for Public Good program at Iowa State University. The `Blogs` tab contains the documentation for each team's work on a weekly basis. Week One is omitted since it was individual training and work beyond Week Eight is reflected in the final presentation blogs for each team.
 
-```{r}
-print("Welcome to Our Page!")
-```
+To learn more about the program, follow the link to the [Iowa State University DSPG Program](https://dspg.iastate.edu/2023-projects).

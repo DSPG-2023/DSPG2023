@@ -1,0 +1,960 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
+
+<meta charset="utf-8">
+<meta name="generator" content="quarto-1.3.353">
+
+<meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
+
+<meta name="author" content="AI Housing Team">
+<meta name="dcterms.date" content="2023-07-14">
+
+<title>DSPG 2023 - Housing Team Final Presentation</title>
+<style>
+code{white-space: pre-wrap;}
+span.smallcaps{font-variant: small-caps;}
+div.columns{display: flex; gap: min(4vw, 1.5em);}
+div.column{flex: auto; overflow-x: auto;}
+div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
+ul.task-list{list-style: none;}
+ul.task-list li input[type="checkbox"] {
+  width: 0.8em;
+  margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
+  vertical-align: middle;
+}
+/* CSS for syntax highlighting */
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+  }
+pre.numberSource { margin-left: 3em;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+</style>
+
+
+<script src="../../../site_libs/quarto-nav/quarto-nav.js"></script>
+<script src="../../../site_libs/quarto-nav/headroom.min.js"></script>
+<script src="../../../site_libs/clipboard/clipboard.min.js"></script>
+<script src="../../../site_libs/quarto-search/autocomplete.umd.js"></script>
+<script src="../../../site_libs/quarto-search/fuse.min.js"></script>
+<script src="../../../site_libs/quarto-search/quarto-search.js"></script>
+<meta name="quarto:offset" content="../../../">
+<script src="../../../site_libs/quarto-html/quarto.js"></script>
+<script src="../../../site_libs/quarto-html/popper.min.js"></script>
+<script src="../../../site_libs/quarto-html/tippy.umd.min.js"></script>
+<script src="../../../site_libs/quarto-html/anchor.min.js"></script>
+<link href="../../../site_libs/quarto-html/tippy.css" rel="stylesheet">
+<link href="../../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles">
+<script src="../../../site_libs/bootstrap/bootstrap.min.js"></script>
+<link href="../../../site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
+<link href="../../../site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" id="quarto-bootstrap" data-mode="light">
+<script id="quarto-search-options" type="application/json">{
+  "location": "navbar",
+  "copy-button": false,
+  "collapse-after": 3,
+  "panel-placement": "end",
+  "type": "overlay",
+  "limit": 20,
+  "language": {
+    "search-no-results-text": "No results",
+    "search-matching-documents-text": "matching documents",
+    "search-copy-link-title": "Copy link to search",
+    "search-hide-matches-text": "Hide additional matches",
+    "search-more-match-text": "more match in this document",
+    "search-more-matches-text": "more matches in this document",
+    "search-clear-button-title": "Clear",
+    "search-detached-cancel-button-title": "Cancel",
+    "search-submit-button-title": "Submit"
+  }
+}</script>
+
+
+<link rel="stylesheet" href="../../../styles.css">
+</head>
+
+<body class="nav-fixed">
+
+<div id="quarto-search-results"></div>
+  <header id="quarto-header" class="headroom fixed-top">
+    <nav class="navbar navbar-expand-lg navbar-dark ">
+      <div class="navbar-container container-fluid">
+      <div class="navbar-brand-container">
+    <a class="navbar-brand" href="../../../index.html">
+    <span class="navbar-title">DSPG 2023</span>
+    </a>
+  </div>
+            <div id="quarto-search" class="" title="Search"></div>
+          <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarCollapse" aria-controls="navbarCollapse" aria-expanded="false" aria-label="Toggle navigation" onclick="if (window.quartoToggleHeadroom) { window.quartoToggleHeadroom(); }">
+  <span class="navbar-toggler-icon"></span>
+</button>
+          <div class="collapse navbar-collapse" id="navbarCollapse">
+            <ul class="navbar-nav navbar-nav-scroll me-auto">
+  <li class="nav-item">
+    <a class="nav-link" href="../../../index.html" rel="" target="">
+ <span class="menu-text">Home</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../allBlogs.html" rel="" target="">
+ <span class="menu-text">Blogs</span></a>
+  </li>  
+  <li class="nav-item">
+    <a class="nav-link" href="../../../about.html" rel="" target="">
+ <span class="menu-text">Project Participants</span></a>
+  </li>  
+</ul>
+            <div class="quarto-navbar-tools ms-auto">
+</div>
+          </div> <!-- /navcollapse -->
+      </div> <!-- /container-fluid -->
+    </nav>
+</header>
+<!-- content -->
+<header id="title-block-header" class="quarto-title-block default page-columns page-full">
+  <div class="quarto-title-banner page-columns page-full">
+    <div class="quarto-title column-body">
+      <h1 class="title">Housing Team Final Presentation</h1>
+                                <div class="quarto-categories">
+                <div class="quarto-category">Final Presentation</div>
+              </div>
+                  </div>
+  </div>
+    
+  
+  <div class="quarto-title-meta">
+
+      <div>
+      <div class="quarto-title-meta-heading">Author</div>
+      <div class="quarto-title-meta-contents">
+               <p>AI Housing Team </p>
+            </div>
+    </div>
+      
+      <div>
+      <div class="quarto-title-meta-heading">Published</div>
+      <div class="quarto-title-meta-contents">
+        <p class="date">July 14, 2023</p>
+      </div>
+    </div>
+    
+      
+    </div>
+    
+  
+  </header><div id="quarto-content" class="quarto-container page-columns page-rows-contents page-layout-article page-navbar">
+<!-- sidebar -->
+<!-- margin-sidebar -->
+    <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
+        <nav id="TOC" role="doc-toc" class="toc-active">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#ai-driven-housing-evaluation-for-rural-community-development" id="toc-ai-driven-housing-evaluation-for-rural-community-development" class="nav-link active" data-scroll-target="#ai-driven-housing-evaluation-for-rural-community-development"><strong>AI-Driven Housing Evaluation for Rural Community Development</strong></a>
+  <ul class="collapse">
+  <li><a href="#introduction" id="toc-introduction" class="nav-link" data-scroll-target="#introduction"><strong>Introduction</strong></a></li>
+  <li><a href="#goal-and-objectives" id="toc-goal-and-objectives" class="nav-link" data-scroll-target="#goal-and-objectives"><strong>Goal and Objectives</strong></a></li>
+  <li><a href="#literature-review" id="toc-literature-review" class="nav-link" data-scroll-target="#literature-review"><strong>Literature Review</strong></a></li>
+  <li><a href="#workflow" id="toc-workflow" class="nav-link" data-scroll-target="#workflow">Workflow</a></li>
+  <li><a href="#data-collection" id="toc-data-collection" class="nav-link" data-scroll-target="#data-collection">Data Collection</a>
+  <ul class="collapse">
+  <li><a href="#what-is-web-scraping" id="toc-what-is-web-scraping" class="nav-link" data-scroll-target="#what-is-web-scraping">What is Web Scraping?</a></li>
+  <li><a href="#address-collection" id="toc-address-collection" class="nav-link" data-scroll-target="#address-collection">Address Collection</a></li>
+  <li><a href="#image-collection" id="toc-image-collection" class="nav-link" data-scroll-target="#image-collection">Image Collection</a></li>
+  <li><a href="#web-scraping-zillow" id="toc-web-scraping-zillow" class="nav-link" data-scroll-target="#web-scraping-zillow">Web Scraping Zillow</a></li>
+  <li><a href="#scraping-google-street-view" id="toc-scraping-google-street-view" class="nav-link" data-scroll-target="#scraping-google-street-view">Scraping Google Street View</a></li>
+  <li><a href="#attribute-collection" id="toc-attribute-collection" class="nav-link" data-scroll-target="#attribute-collection">Attribute Collection</a></li>
+  </ul></li>
+  <li><a href="#ai-models" id="toc-ai-models" class="nav-link" data-scroll-target="#ai-models">AI Models</a>
+  <ul class="collapse">
+  <li><a href="#guide-to-housing-project-ai-models" id="toc-guide-to-housing-project-ai-models" class="nav-link" data-scroll-target="#guide-to-housing-project-ai-models">Guide to Housing Project AI Models</a></li>
+  <li><a href="#confidence-level-and-accuracy-of-models" id="toc-confidence-level-and-accuracy-of-models" class="nav-link" data-scroll-target="#confidence-level-and-accuracy-of-models">Confidence Level and Accuracy of Models</a></li>
+  </ul></li>
+  <li><a href="#geographic-visualization" id="toc-geographic-visualization" class="nav-link" data-scroll-target="#geographic-visualization">Geographic Visualization</a>
+  <ul class="collapse">
+  <li><a href="#what-is-gis-and-how-is-it-used-in-this-project" id="toc-what-is-gis-and-how-is-it-used-in-this-project" class="nav-link" data-scroll-target="#what-is-gis-and-how-is-it-used-in-this-project">What is GIS and how is it used in this project?</a></li>
+  <li><a href="#geocoding-addresses" id="toc-geocoding-addresses" class="nav-link" data-scroll-target="#geocoding-addresses">Geocoding Addresses</a></li>
+  <li><a href="#mapping-the-data" id="toc-mapping-the-data" class="nav-link" data-scroll-target="#mapping-the-data">Mapping the Data</a></li>
+  <li><a href="#tableau-dashboard" id="toc-tableau-dashboard" class="nav-link" data-scroll-target="#tableau-dashboard">Tableau Dashboard</a></li>
+  </ul></li>
+  <li><a href="#demographic-analysis" id="toc-demographic-analysis" class="nav-link" data-scroll-target="#demographic-analysis">Demographic Analysis</a>
+  <ul class="collapse">
+  <li><a href="#profiling-using-r-studio" id="toc-profiling-using-r-studio" class="nav-link" data-scroll-target="#profiling-using-r-studio">Profiling Using R Studio</a></li>
+  <li><a href="#collecting-data-to-identify-study-communities" id="toc-collecting-data-to-identify-study-communities" class="nav-link" data-scroll-target="#collecting-data-to-identify-study-communities">Collecting Data to Identify Study Communities</a></li>
+  </ul></li>
+  <li><a href="#conclusion" id="toc-conclusion" class="nav-link" data-scroll-target="#conclusion">Conclusion</a></li>
+  <li><a href="#future-research-questions" id="toc-future-research-questions" class="nav-link" data-scroll-target="#future-research-questions">Future Research Questions</a>
+  <ul class="collapse">
+  <li><a href="#future-work-that-chris-needs-to-complete" id="toc-future-work-that-chris-needs-to-complete" class="nav-link" data-scroll-target="#future-work-that-chris-needs-to-complete"><strong>Future work that Chris needs to complete:</strong></a></li>
+  </ul></li>
+  <li><a href="#recommendations" id="toc-recommendations" class="nav-link" data-scroll-target="#recommendations">Recommendations</a></li>
+  <li><a href="#data-source" id="toc-data-source" class="nav-link" data-scroll-target="#data-source">Data source</a></li>
+  </ul></li>
+  </ul>
+</nav>
+    </div>
+<!-- main -->
+<main class="content quarto-banner-title-block" id="quarto-document-content">
+
+
+
+
+<section id="ai-driven-housing-evaluation-for-rural-community-development" class="level1">
+<h1><strong>AI-Driven Housing Evaluation for Rural Community Development</strong></h1>
+<hr>
+<p><img src="images/MicrosoftTeams-image (1) 2.png" class="img-fluid"></p>
+<hr>
+<section id="introduction" class="level2">
+<h2 class="anchored" data-anchor-id="introduction"><strong>Introduction</strong></h2>
+<p>Crucial to Midwestern rural vitality is a supply of good quality housing for residents of all ages and income levels. Crucial to achieving that goal is a supply of good quality data describing local housing conditions.</p>
+<p>Ideally, communities would have ready access to information about their local housing stock to identify needs, set priorities, and optimize allocation of resources and investments. Unfortunately, many small communities lack the capacity to systematically evaluate their housing stock.</p>
+<p>City and county property assessors’ offices seem a logical source for obtaining local housing data; however, tapping into these assessor databases poses some challenges. Access to a community’s full database may be restricted, as most city and county assessors now outsource data management to private firms. Even when accessible, the database may not be amenable to custom tabulations and targeted queries about specific housing conditions. In addition, the subjectivity of the assessment process makes it difficult to compare data across communities.</p>
+<p>Data science approaches including Artificial Intelligence (AI) models offer great potential for addressing these and other housing data challenges encountered by rural communities and researchers who study them. For example, image classification models could be used to rate the condition of selected exterior housing features, such as roof and siding, or to detect the presence of problems such as missing or damaged gutters or an overgrown landscape. Leveraging AI technology in this manner could streamline the housing evaluation process, reduce subjectivity, and facilitate informed decision-making for housing investment and development initiatives in rural communities.</p>
+</section>
+<section id="goal-and-objectives" class="level2">
+<h2 class="anchored" data-anchor-id="goal-and-objectives"><strong>Goal and Objectives</strong></h2>
+<p>The goal of this project is to investigate methods for conducting a thorough and objective evaluation of a community’s housing stock using AI, and also to explore how such methods could be adapted for multi-community analysis of relationships between housing quality and other local attributes in rural areas.</p>
+<p><strong>Objectives:</strong></p>
+<ul>
+<li><p>Conduct a literature review to examine examples of AI applications in planning and housing.</p></li>
+<li><p>Identify study communities and collect data about the communities.</p></li>
+<li><p>Collect housing data, including images, from existing sources such as realtor websites, Google Street View and county assessor websites.</p></li>
+<li><p>Collect data on housing age, number of bedrooms, square footage, and assessed value.</p></li>
+<li><p>Utilize roof, gutter, siding, and landscape condition as part of AI analysis to identify homes that may qualify for community assistance programs.</p></li>
+<li><p>Assess the results and recommend next steps for Year 2 of the project, considering the insights gained and community input received.</p></li>
+</ul>
+</section>
+<section id="literature-review" class="level2">
+<h2 class="anchored" data-anchor-id="literature-review"><strong>Literature Review</strong></h2>
+<p>An important objective of the project was its focus on reviewing as much accessible literature and websites. Review of how cities have been using AI to address problems, and specifically housing problems, and how counties or cities assess housing conditions. The section also answers the question, what data might we use to assess housing condition in this project?</p>
+<ol type="1">
+<li><strong>Ames City Housing Inspection</strong></li>
+</ol>
+<p>In the context of housing inspections, the City of Ames in Iowa has implemented a comprehensive housing inspection program to ensure housing quality and safety standards are met. The Ames City Housing Inspection program focuses on various aspects of housing conditions, including grass height, weeds, trees, refuse-garbage, sidewalks, deck/porch, gutters, paint, roof, windows, structural foundation, and graffiti (City of Ames, 2021). This program serves as a valuable reference for evaluating and assessing housing quality in the rural context, particularly in the Iowa region. However, despite the efforts made by programs like the Ames City Housing Inspection, the subjective nature of evaluating existing housing conditions and the limited availability of resources for thorough investigations still pose challenges.</p>
+<p>Read more <a href="https://www.cityofames.org/home/showpublisheddocument/53168/637087226539170000" target="_blank">here</a>&nbsp;and <a href="https://jse.amstat.org/v19n3/decock/DataDocumentation.txt" target="_blank">here</a>.</p>
+<ol start="2" type="1">
+<li><strong>U.S Department of Housing and Urban Development</strong>&nbsp;</li>
+</ol>
+<p>The U.S. Department of Housing and Urban Development (HUD) plays a vital role in ensuring housing quality standards across the United States. In their assessment of housing quality, HUD examines various aspects of the building exterior, including the condition of the foundation, stairs, rails, porches, roof, gutters, exterior surfaces, and chimney. Additionally, HUD emphasizes the importance of evaluating lead-based paint on exterior surfaces to ensure the safety and well-being of residents. These guidelines provided by HUD serve as a valuable reference for assessing and maintaining housing quality standards, contributing to the overall improvement of housing conditions nationwide.&nbsp;</p>
+<p>Read more <a href="https://www.hud.gov/sites/dfiles/OCHCO/documents/52580A.PDF" target="_blank">here</a>.</p>
+<ol start="3" type="1">
+<li><strong>Orange County Minimum Housing Code</strong> &nbsp;</li>
+</ol>
+<p>The Orange County minimum housing code plays a crucial role in ensuring housing standards and safety within the county. As outlined in Section 20-34 of the code, specific requirements include the maintenance of a safe foundation, stairs, walls, roofs, and porches. The code also addresses concerns such as high weeds and dilapidated vehicles, which can impact the overall quality of housing in the area.&nbsp;</p>
+<p>Read more <a href="https://library.municode.com/nc/orange_county/codes/code_of_ordinances?nodeId=PTIGEOR_CH20HO_ARTIIMIHOST" target="_blank">here</a>.</p>
+<ol start="4" type="1">
+<li><strong>Turning Data into Equity</strong></li>
+</ol>
+<p>In Detroit, 150 residents were tasked with surveying vacant land across the city that could be used. According to <a href="https://datasmart.ash.harvard.edu/news/article/battling-blight-four-ways-cities-are-using-data-to-address-vacant-propertie" target="_blank">Data-Smart City Solutions</a>, part of Harvard University, around 40,000 properties were found to be blighted and were subsequently given priority for either demolition or remediation. By involving residents in the surveying process, the city successfully identified a significant number of blighted properties, allowing for informed decision-making on demolition or remediation. Community engagement offers an avenue for prioritization, transparency, and alignment with local needs and aspirations.</p>
+<ol start="5" type="1">
+<li><strong>RoadBotics</strong></li>
+</ol>
+<p>RoadBotics has developed a technology using artificial intelligence that has the ability to analyze road imagery to then assess issues and produce cost effective solutions. This allows cities to know when and where repairs need to take place, and deal with them while saving money. This type of technology also improves safety within cities as problems will not go unnoticed.&nbsp;</p>
+<p>Read more <a href="https://www.roadbotics.com/roadway-tutorial/" target="_blank">here</a>.&nbsp;</p>
+<ol start="6" type="1">
+<li><a href="https://www.masoncityassessor.net/" target="_blank">Mason City</a> <strong>Assessment</strong></li>
+</ol>
+<p>According to Tara Brueggeman, an Assessor for Mason City, data is primarily sourced from publicly available platforms such as Beacon and the Vanguard assessment data management system. While web scraping is not feasible, city and county assessor offices can generate customized reports using SQL from Vanguard.</p>
+<p>During the appraisal process, appraisers rely on blueprints for property details and conduct in-person visits to measure and inspect properties. Interior inspections are now limited due to homeowner preferences, but the condition of the exterior serves as a valuable indicator. To minimize bias, appraisers adhere to guidelines outlined in the Iowa Real Property appraisal manual, avoid assessments during unfavorable personal circumstances, and undergo a review process by another individual before finalizing assessment records. These efforts contribute to the objectivity and accuracy of property assessments in Mason City.</p>
+<ol start="7" type="1">
+<li><strong>Des Moines Neighborhood Revitalization Program</strong></li>
+</ol>
+<p>The Des Moines Revitalization program is pioneering a groundbreaking approach to assess housing conditions through the utilization of AI. With the aim of revitalizing the city’s housing stock, this innovative program leverages AI technology to objectively evaluate the condition of homes in Des Moines. By analyzing various data points, including structural features, maintenance history, and overall quality, the AI system provides a comprehensive assessment of each property. This data-driven approach allows the program to identify areas in need of improvement, prioritize revitalization efforts, and allocate resources effectively.</p>
+<p>Read more <a href="https://www.desmoinesregister.com/story/news/local/des-moines/2023/03/08/des-moines-wonders-if-a-machine-can-better-assess-home-conditions/69965121007/?utm_source=ground.news&amp;utm_medium=referral" target="_blank">here</a> and <a href="https://www.axios.com/local/des-moines/2023/03/10/ai-assessment-desmoines-properties-iowa" target="_blank">here</a>.</p>
+</section>
+<section id="workflow" class="level2">
+<h2 class="anchored" data-anchor-id="workflow">Workflow</h2>
+<p>The image below depicts our project plan, outlining the strategies and actions we undertook to accomplish our objectives. The strategies include image gathering / data collection, creating a database and building AI models.</p>
+<p><img src="images/project_plan_new2.png" class="img-fluid"></p>
+</section>
+<section id="data-collection" class="level2">
+<h2 class="anchored" data-anchor-id="data-collection">Data Collection</h2>
+<p>We first gathered house images manually from Kaggle, amassing a total of approximately 35,000 images. Kaggle is a website for hosting and sharing datasets. This website has many useful datasets for building AI models, which is why we decided to use images from Kaggle to aid in the initial AI model building process.</p>
+<p>However, since we needed more relevant images specific to Iowa, we decided to web scrape from other sources. Through this technique, we automated the process of acquiring images. Despite this improvement, we still had to manually sift through the gathered images, distinguishing those of high quality and suitable features for training our model from those of poorer quality.</p>
+<p>Based on the WINVEST project, the team decided to web scrape housing images and data from the communities of Grundy Center, New Hampton and Independence.</p>
+<section id="what-is-web-scraping" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-web-scraping">What is Web Scraping?</h3>
+<p>Web scraping is like a digital tool that automatically collects information from websites, allowing us to gather data quickly without manual searching.</p>
+<p>Before starting any web scraping, our team had a plan to scrape the following websites for image, address, and attribute data:</p>
+<ul>
+<li><p><strong>Realtor Websites</strong></p>
+<p><a href="https://www.zillow.com/?utm_medium=cpc&amp;utm_source=google&amp;utm_content=1471764169%7C65545421228%7Caud-352785741564:kwd-570802407%7C603457706088%7C&amp;semQue=null&amp;gclid=EAIaIQobChMI-Nv7oPL3_wIVWSazAB0eyA9CEAAYASAAEgKaafD_BwE" target="_blank"><strong>Zillow</strong></a> and <a href="https://www.trulia.com/" target="_blank"><strong>Trulia</strong></a></p>
+<p>Zillow and Trulia are online platforms and app for real estate that allows users to search for homes, view property listings, and access data on home values and market trends.</p>
+<p><a href="https://www.realtor.com/" target="_blank"><strong>Realtor.com</strong></a></p>
+<p>Realtor.com is a website and app that offers a comprehensive database of property listings, allowing users to search for homes, apartments, and other real estate options. It also provides resources for finding real estate agents.</p></li>
+<li><p><strong>County Assessor Websites</strong></p>
+<p>These are online portals provided by local government entities that offer property-related information, including property records, tax assessments, and maps. Users can access details about property ownership and tax information.</p></li>
+<li><p><a href="https://www.iowaassessors.com/" target="_blank"><strong>Vanguard Appraisals, Inc</strong></a></p>
+<p>Vanguard Appraisals, Inc is a company that specializes in providing property appraisal services and software solutions for assessment in cities, counties and township Assessment Offices.-</p></li>
+<li><p><a href="https://beacon.schneidercorp.com/" target="_blank"><strong>Beacon</strong></a> <strong>by Schneider Geospatial</strong></p>
+<p>This is a software platform used for property assessment and tax administration. It helps government agencies manage property data, valuation processes, and tax assessments by offering geospatial mapping, data analytics, and reporting capabilities.</p></li>
+<li><p><a href="https://www.google.com/maps/@42.0275015,-93.6351493,14z?entry=ttu" target="_blank"><strong>Google Street View</strong></a></p>
+<p>Google Street View is a feature that provides 360-degree panoramic views of streets and locations worldwide. It allows users to virtually explore places, landmarks, and even remote areas, offering a unique visual experience from the comfort of their screens.</p></li>
+</ul>
+<p>Upon further reflection, we realized that Zillow owns Trulia. The major difference in the two sites is the Zestimate provided on Zillow. Because we were interested in the housing value, we chose to scrape Zillow out of the two.</p>
+<p>We collected data from the following sites:</p>
+<ul>
+<li>Zillow</li>
+<li>Polk County Assessor Website</li>
+<li>Vanguard</li>
+<li>Beacon</li>
+<li>Google Street View</li>
+</ul>
+</section>
+<section id="address-collection" class="level3">
+<h3 class="anchored" data-anchor-id="address-collection">Address Collection</h3>
+<p>Lists of addresses and other information for Iowa cities are very hard to come by. It is not likely that such lists exists for cities. This is why we planned to scrape data.</p>
+<p>Vanguard and Beacon are companies used by most cities in Iowa. They hold much of the state’s housing data. This is why the data collection from these websites were of importance.</p>
+<p>Vanguard has a GIS tool available that allowed us to select portions of cities and download addresses and parcel numbers. Only data for Independence was available through Vanguard. Vanguard limits the number of parcels we can select at a time for download.</p>
+<p>Beacon has more protection against web scraping than Vanguard. Also, the GIS tool was not available for Beacon data. The process of downloading data one house at a time would be extremely time consuming. For example, Grundy Center, a city of around 2,000 people, has approximately 1,200 addresses. Collecting data for 1,200 addresses without automation would take a very long time.</p>
+<p>To scrape addresses and parcel numbers, we used the <a href="https://chrome.google.com/webstore/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah" target="_blank">Instant Data Scraper Tool</a>. This scraper provided us with CSV files of house data.</p>
+<p>Once the data had been scraped, we found that the CSV files provided us with a format that was not ideal.</p>
+<p>Examples of issues we encountered with the CSV files:</p>
+<ul>
+<li><p>Many of the cells contained hidden characters.</p></li>
+<li><p>New lines within the cells.</p></li>
+</ul>
+<p>To fix this file format, we used Excel’s Text-to-Columns tool to organize text, and Excel functions to separate and combine sections, and the Excel Find and Replace tool to remove unwanted characters.</p>
+<p>In addition to re-formatting data, it was also necessary to create links for the Google Street View image collection process. Below is an example of a link to a Google Street View Image.</p>
+<p><strong>https://maps.googleapis.com/maps/api/streetview?size=800x800&amp;location=303+I+AVE,+GRUNDY+CENTER+IOWA</strong></p>
+<p>More information <a href="https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#address-collection-and-cleaning" target="_blank">here</a>.</p>
+</section>
+<section id="image-collection" class="level3">
+<h3 class="anchored" data-anchor-id="image-collection">Image Collection</h3>
+<p>Out of our five scraping sites, we got images from Zillow and Google Street View. Both sites presented challenges in gathering images. Because of the challenges, we decided to use WINVEST photos as well. In total, the image data came from four sites:</p>
+<ul>
+<li><p>Zillow</p></li>
+<li><p>Google Street View</p></li>
+<li><p>WINVEST</p></li>
+<li><p>Vanguard</p></li>
+</ul>
+<p><strong>Naming Convention</strong></p>
+<p>Before we collected images, we created a standardized naming convention to maintain efficient organization. The base of our naming convention is <strong>source_city_address_</strong>. In general, the first letter of the source or city represents it. Independence and New Hampton were adjusted to use the letter “D”and “H,” respectively.</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Source</th>
+<th>City</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>Z - Zillow</td>
+<td>H - New Hampton</td>
+</tr>
+<tr class="even">
+<td>G - Google</td>
+<td>D - Independence</td>
+</tr>
+<tr class="odd">
+<td>V - Vanguard</td>
+<td>G - Grundy Center</td>
+</tr>
+<tr class="even">
+<td>B - Beacon</td>
+<td>S - Slater</td>
+</tr>
+<tr class="odd">
+<td>W - WINVEST</td>
+<td></td>
+</tr>
+</tbody>
+</table>
+<p>Here is an example of the naming convention in use:</p>
+<blockquote class="blockquote">
+<p>Source: Zillow</p>
+<p>City: New Hampton, Iowa</p>
+<p>Address: 311 W Main St</p>
+<p><strong>Result</strong>: Z_H_311 W MAIN ST_</p>
+</blockquote>
+</section>
+<section id="web-scraping-zillow" class="level3">
+<h3 class="anchored" data-anchor-id="web-scraping-zillow">Web Scraping Zillow</h3>
+<p>We scraped and downloaded image URLs for “For Sale” houses and recently Sold houses on Zillow. In total, we could scrape about one hundred images from Zillow. There were many more images available on Zillow that we couldn’t scrape.</p>
+<p><strong>Challenges and Limitations of Scraping Zillow</strong></p>
+<ul>
+<li><p>Good images are only available for For Sale and recently Sold houses. Other house images on Zillow are taken from Google.</p></li>
+<li><p>Images are stored in a carousel. The only image we could scrape was the first, which wasn’t always an image of the exterior.</p></li>
+<li><p>Lazy loading: The term “lazy loading” refers to how a webpage loads its data. Because Zillow is lazy, it only loads the image data when the user scrolls down the page. When web scraping, only the loaded images are available. A more complicated process is needed to scrape a lazily loaded webpage.</p></li>
+</ul>
+<p>Zillow is a great source for image data if you can get around the lazy loading issue and grab all images from the carousel. Zillow images for For Sale homes are more recent than other sources.</p>
+</section>
+<section id="scraping-google-street-view" class="level3">
+<h3 class="anchored" data-anchor-id="scraping-google-street-view">Scraping Google Street View</h3>
+<p>A Google API key is required to scrape images from Google Street View. It is included in the image URL to allow viewing of a specific house.</p>
+<p>As discussed earlier, the address data scraped from Vanguard and Beacon was cleaned and stored in CSV files to create the image URLs for use with Google Street View. We wrote code to open each image URL in the CSV file and download the image.</p>
+<p>Here is an example of the code to download the image from Google Street View.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>data <span class="ot">&lt;-</span> <span class="fu">read.csv</span>(<span class="st">"file_path"</span>)</span>
+<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-3"><a href="#cb1-3" aria-hidden="true" tabindex="-1"></a>urls_start <span class="ot">&lt;-</span> data[, <span class="dv">1</span>]</span>
+<span id="cb1-4"><a href="#cb1-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-5"><a href="#cb1-5" aria-hidden="true" tabindex="-1"></a>urls_full <span class="ot">&lt;-</span> <span class="fu">paste</span>(urls_start, “<span class="sc">&amp;</span><span class="at">key=</span>”, <span class="at">sep =</span> ““)</span>
+<span id="cb1-6"><a href="#cb1-6" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-7"><a href="#cb1-7" aria-hidden="true" tabindex="-1"></a>urls_full_api_key <span class="ot">&lt;-</span> <span class="fu">paste</span>(urls_full, api_key, <span class="at">sep =</span> ““)</span>
+<span id="cb1-8"><a href="#cb1-8" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-9"><a href="#cb1-9" aria-hidden="true" tabindex="-1"></a><span class="co"># creates folder and downloads all images</span></span>
+<span id="cb1-10"><a href="#cb1-10" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-11"><a href="#cb1-11" aria-hidden="true" tabindex="-1"></a><span class="fu">dir.create</span>(“google_images_folder_name”)</span>
+<span id="cb1-12"><a href="#cb1-12" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-13"><a href="#cb1-13" aria-hidden="true" tabindex="-1"></a><span class="cf">for</span>(i <span class="cf">in</span> <span class="fu">seq_along</span>(urls_full_api_key)) {</span>
+<span id="cb1-14"><a href="#cb1-14" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-15"><a href="#cb1-15" aria-hidden="true" tabindex="-1"></a>___ file_path <span class="ot">&lt;-</span> <span class="fu">file.path</span>(“google_images_folder_name”, <span class="fu">paste0</span>(“image_name”, data[i,<span class="dv">6</span>], “_.png”))</span>
+<span id="cb1-16"><a href="#cb1-16" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-17"><a href="#cb1-17" aria-hidden="true" tabindex="-1"></a>___ <span class="fu">download.file</span>(urls_full_api_key[i], file_path, <span class="at">mode =</span> “wb”)</span>
+<span id="cb1-18"><a href="#cb1-18" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-19"><a href="#cb1-19" aria-hidden="true" tabindex="-1"></a>___ <span class="fu">print</span>(file_path)</span>
+<span id="cb1-20"><a href="#cb1-20" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-21"><a href="#cb1-21" aria-hidden="true" tabindex="-1"></a>___ <span class="fu">print</span>(i)</span>
+<span id="cb1-22"><a href="#cb1-22" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb1-23"><a href="#cb1-23" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>Click <a href="https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#creating-google-api-links" target="_blank">here</a> for more information.</p>
+<p><strong>Challenges of Scraping Google Street View</strong></p>
+<p>During the process of gathering images from Google Street View, we encountered the following problems:</p>
+<ul>
+<li><p>Image downloading takes time. It takes upwards of an hour for a city of 2,000.</p></li>
+<li><p>Blurred houses. Certain homeowners request Google to intentionally blur their residences on Google Street View to protect their privacy. Such images were ignored.</p></li>
+<li><p>Address inconsistencies in Independence that caused errors when scraping. Some houses listed multiple house numbers, such as 100/101, while others had addresses like 100 1/2.</p></li>
+<li><p>Duplicate images for different addresses.</p></li>
+<li><p>Particular streets were not mapped, particularly in New Hampton, resulting in no image available.</p></li>
+<li><p>Images of inside of stores showing as an exterior house image.</p></li>
+</ul>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/MicrosoftTeams-image (1).png" class="img-fluid" width="436"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/no_image.png" class="img-fluid" width="436"></p>
+</div>
+</div>
+</div>
+<p>Click <a href="https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#scrape-google-images" target="_blank">here</a> for more information on collecting images from Google Street View.</p>
+</section>
+<section id="attribute-collection" class="level3">
+<h3 class="anchored" data-anchor-id="attribute-collection">Attribute Collection</h3>
+<p><strong>Using a Spider to Collect Vanguard Information</strong></p>
+<p>A spider is an automated version of web scraping that automatically goes page by page on a website. A spider reduces manual involvement in the scraping process and makes it more efficient.</p>
+<p>Aaron Case, our friend on the AI Local Foods team, built us a spider to scrape Vanguard data. We were able to grab the following information from Vanguard:</p>
+<ul>
+<li><p>Parcel number</p></li>
+<li><p>Image URL</p></li>
+<li><p>House style</p></li>
+<li><p>Year built</p></li>
+<li><p>Square footage</p></li>
+<li><p>Appraised value</p></li>
+</ul>
+<p>Click <a href="https://cyberspeedac.github.io/Aaron-Case-DSPG-Blog/posts/Aaron_C_MultiWeek/Aaron_C_WebScraping.html" target="_blank">here</a> for more information on how Spider works.</p>
+</section>
+</section>
+<section id="ai-models" class="level2">
+<h2 class="anchored" data-anchor-id="ai-models">AI Models</h2>
+<p>This section demonstrates the potential of AI to recognize the quality of house.</p>
+<p>Details of the first AI model can be found <a href="https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_week3/Week_Three.html" target="_blank">here</a>.</p>
+<ul>
+<li><p>Building a Binary Image Classification AI Model - <a href="https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#building-a-binary-image-classification-ai-model" target="_blank">Binary Image Classification</a></p></li>
+<li><p>Building a Multi-Category Image Classification AI Model - <a href="https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#building-a-multi-category-image-classification-ai-model" target="_blank">Multi-Category Image Classification</a></p></li>
+<li><p>Sorting Images - <a href="https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#sorting-images" target="_blank">Image Sorting</a></p></li>
+<li><p>Training the Model - <a href="https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#training-the-model" target="_blank">Model Training</a></p></li>
+<li><p>Utilizing a Trained AI Model - <a href="https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#utilizing-a-trained-ai-model" target="_blank">Utilizing AI Model</a></p></li>
+<li><p>Exporting Predictions to a CSV on Address - <a href="https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#exporting-predictions-to-a-csv-on-address" target="_blank">Export Predictions</a></p></li>
+</ul>
+<p><img src="images/Endgame.png" class="img-fluid"></p>
+<section id="guide-to-housing-project-ai-models" class="level3">
+<h3 class="anchored" data-anchor-id="guide-to-housing-project-ai-models"><a href="https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_AI_guide_w9/AI_guide.html" target="_blank">Guide to Housing Project AI Models</a></h3>
+</section>
+<section id="confidence-level-and-accuracy-of-models" class="level3">
+<h3 class="anchored" data-anchor-id="confidence-level-and-accuracy-of-models">Confidence Level and Accuracy of Models</h3>
+<p><img src="images/accuracy_percent.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="geographic-visualization" class="level2">
+<h2 class="anchored" data-anchor-id="geographic-visualization">Geographic Visualization</h2>
+<section id="what-is-gis-and-how-is-it-used-in-this-project" class="level3">
+<h3 class="anchored" data-anchor-id="what-is-gis-and-how-is-it-used-in-this-project">What is GIS and how is it used in this project?</h3>
+<p>A Geographic Information System (GIS) is a spatial system that is used to analyze, display and store geographically referenced information. GIS uses data that is attached to a unique location and can be useful for identifying problems and trends.</p>
+<p>More information <a href="https://www.esri.com/en-us/what-is-gis/overview" target="_blank">here</a>.</p>
+<p>Mapping our house quality output using GIS enables us to visualize the AI-model output for vegetation, siding, gutters, and roof characteristics. This will allow us to visualize locations of houses in good conditions versus poor condition.</p>
+<p>In the future, it could be beneficial to utilize statistical analysis techniques to understand the spatial relationship between data and visualize clusters.</p>
+</section>
+<section id="geocoding-addresses" class="level3">
+<h3 class="anchored" data-anchor-id="geocoding-addresses">Geocoding Addresses</h3>
+<p>To visualize addresses for the communities, first we needed to geocode each address. Because GIS does not always know the exact location of an address, the latitude and longitude of addresses are needed. There are many types of software that can be used to geocode addresses.</p>
+<p>QGIS is an open-source GIS software. We first geocoded addresses by using the QGIS Plugin called MMQGIS. When using this method, the plugin would crash and fail to geocode all the addresses. Because of this, we geocoded addresses using R instead. Base code was from <a href="https://www.storybench.org/geocode-csv-addresses-r/" target="_blank">storybench</a>.</p>
+<p>Below is an image of a CSV file with addresses latitude and longitude.</p>
+<p><img src="images/ogden_geocoded_addresses.png" class="img-fluid"></p>
+<p>More information <a href="https://www.esri.com/en-us/what-is-gis/overview" target="_blank">here</a>.</p>
+</section>
+<section id="mapping-the-data" class="level3">
+<h3 class="anchored" data-anchor-id="mapping-the-data">Mapping the Data</h3>
+<p>We first created maps in QGIS.</p>
+<p><img src="images/siding_slater.png" class="img-fluid"></p>
+<p>We later realized we can use Tableau for better data connections and visualizations. Tableau is a software used for data visualization. Tableau was more appealing because of its ability to create maps and compare data between cities using the same software. ArcGIS is another viable option for mapping, but it requires a licence and for the reasons above, we chose to use Tableau.</p>
+<p>We created a step by step process for creating a tableau dashboard showing the output from the AI Models and mapping it to the already geocoded addresses.</p>
+<p>Click <a href="https://1angelinaevans.github.io/AngelinaEvansBlog/posts/MappingHouseData/MappingHouseQuality.html" target="_blank">here</a> for more information.</p>
+</section>
+<section id="tableau-dashboard" class="level3">
+<h3 class="anchored" data-anchor-id="tableau-dashboard">Tableau Dashboard</h3>
+<p><img src="images/screenshot_dashboardnew.png" class="img-fluid" width="619"></p>
+<section id="tableau-dashboard-1" class="level4">
+<h4 class="anchored" data-anchor-id="tableau-dashboard-1"><a href="https://1angelinaevans.github.io/AngelinaEvansBlog/posts/House%20Quality%20Dashboards/HouseQualityDashboard.html" target="_blank">Tableau Dashboard</a></h4>
+</section>
+</section>
+</section>
+<section id="demographic-analysis" class="level2">
+<h2 class="anchored" data-anchor-id="demographic-analysis">Demographic Analysis</h2>
+<p>Identifying housing issues in a rural community requires more than just describing the physical and locational characteristics of its housing stock. A more complete understanding of local housing issues also requires consideration of the community’s residents. After consulting with our clients, we selected a set of demographic and economic measures to characterize the local population in our study communities. These indicators allow communties to put their local housing conditions within a broader context of peer cities.</p>
+<section id="profiling-using-r-studio" class="level3">
+<h3 class="anchored" data-anchor-id="profiling-using-r-studio">Profiling Using R Studio</h3>
+<p>We developed a demographic profile of the three WINVEST cities - Grundy Center, Independence, and New Hampton - using R Studio. A demographic profile is a type of demographic analysis that focuses on a specific area. They are built using demographic data. Demographic data are data on <strong>age</strong>, <strong>race</strong>, <strong>ethnicity</strong>, <strong>gender</strong>, <strong>marital status</strong>, <strong>income</strong>, <strong>education</strong>, and <strong>employment</strong>.</p>
+<p>The following demographic data were used for the demographic profile of the communities:</p>
+<ul>
+<li><p>Population</p></li>
+<li><p>Median income</p></li>
+<li><p>Median home value</p></li>
+<li><p>Median year home built</p></li>
+<li><p>Home ownership rates</p></li>
+</ul>
+<p>We chose these demographic data to give a well-rounded analysis of the housing demographics in our chosen communities and add context to the housing conditions we gathered.</p>
+<p>Our data came from the <strong>United States Decennial Census</strong> and the <strong>American Community Survey (ACS)</strong>. The U.S. census is one of the best places to gather demographic data because it counts every resident in the United States. It has a very low inaccuracy, but the U.S. census is only conducted every ten years. The American Community Survey (ACS) is your best bet for more recent data. The ACS has more detailed demographic data and is conducted every five years for the entirety of the United States and every year for places with a population over 65,000. The ACS does not count every individual resident in the United States and instead relies on surveying a proportion of the population to create estimates of the demographics. Thus, it can be inaccurate and provides a margin of error. It is best used for data on the changing population, housing, and workforce.</p>
+<p>To collect data in R Studio, we installed the&nbsp;<em>Tidyverse</em>&nbsp;and&nbsp;<em>Tidycensus</em>&nbsp;packages and loaded them with the <code>library()</code> function.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidyverse"</span>) </span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"tidycensus"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidyverse) </span>
+<span id="cb3-2"><a href="#cb3-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(tidycensus)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>The <em>Tidyverse</em> package includes a range of functions that make coding in R Studio more user-friendly. It is not necessary for data collection, but it certainly does help. In contrast, the <em>Tidycensus</em> package is essential to data collection. The <em>Tidycensus</em> package lets you pull data directly from the Decennial Census and the ACS using the <code>get_decennial()</code> and <code>get_acs()</code> functions. You only need to specify three arguments to pull data: geography, year, and variable.</p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb4"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb4-1"><a href="#cb4-1" aria-hidden="true" tabindex="-1"></a><span class="fu">get_decennial</span>(<span class="at">geography =</span> <span class="st">"state"</span>,</span>
+<span id="cb4-2"><a href="#cb4-2" aria-hidden="true" tabindex="-1"></a>              <span class="at">variable =</span> <span class="st">"P001001"</span>,</span>
+<span id="cb4-3"><a href="#cb4-3" aria-hidden="true" tabindex="-1"></a>              <span class="at">year =</span> <span class="dv">2010</span>)  </span>
+<span id="cb4-4"><a href="#cb4-4" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb4-5"><a href="#cb4-5" aria-hidden="true" tabindex="-1"></a><span class="fu">get_acs</span>(<span class="at">geography =</span> <span class="st">"region"</span>,</span>
+<span id="cb4-6"><a href="#cb4-6" aria-hidden="true" tabindex="-1"></a>        <span class="at">variable =</span> <span class="st">"B19013_001"</span>,</span>
+<span id="cb4-7"><a href="#cb4-7" aria-hidden="true" tabindex="-1"></a>        <span class="at">year =</span> <span class="dv">2010</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<p>To visualize data in R Studio, we installed and loaded more packages: <em>ggplot2, scales,</em> and <em>ggthemes.</em></p>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggplot2"</span>) </span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"scales"</span>) </span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a><span class="fu">install.packages</span>(<span class="st">"ggthemes"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggplot2) </span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(scales) </span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(ggthemes)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stderr">
+<pre><code>Warning: package 'ggthemes' was built under R version 4.3.1</code></pre>
+</div>
+</div>
+<p><em>The ggplot2</em> package is required to create a plot in R Studio. With <em>ggplot2</em> you get access to the function <code>ggplot(),</code> which allows you to create visualizations. <code>ggplot()</code> takes the arguments <code>data</code> and <code>mapping</code> to create a plot. <code>Mapping</code> refers to the x and y coordinates of our data. There are various geoms included in the <em>ggplot2</em> package that aid in creating a visualization. Here are some examples:</p>
+<table class="table">
+<thead>
+<tr class="header">
+<th>Geom</th>
+<th>Result</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td>geom_line()</td>
+<td>line graph</td>
+</tr>
+<tr class="even">
+<td>geom_point()</td>
+<td>scatter plot</td>
+</tr>
+<tr class="odd">
+<td>geom_histogram()</td>
+<td>histogram</td>
+</tr>
+<tr class="even">
+<td>geom_bar()</td>
+<td>bar chart</td>
+</tr>
+<tr class="odd">
+<td>geom_col()</td>
+<td>column chart</td>
+</tr>
+</tbody>
+</table>
+<p>Using the packages above, the following plots were made in R Studio. For an example of how the demographic profile can be used, let’s analyze Grundy Center. Mentioned above, Grundy Center has the lowest housing conditions of our three cities.</p>
+<div class="quarto-layout-panel">
+<div class="quarto-layout-row quarto-layout-valign-top">
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/demographics/all_percent_change.png" class="img-fluid" width="596"></p>
+</div>
+<div class="quarto-layout-cell" style="flex-basis: 50.0%;justify-content: center;">
+<p><img src="images/demographics/pop_projection_cities.png" class="img-fluid" width="596"></p>
+</div>
+</div>
+</div>
+<p>Grundy Center has a percent population change of 7.70%, which is right alongside the percent population change of the state of Iowa and the Midwest. Interestingly, New Hampton has a negative percent change, and Independence has a fairly stable population change. The growth rate of Grundy Center is not reflected in its housing quality.</p>
+<p>The population projection plot shows Grundy Center is the smallest of our three communities. Its size may explain the housing quality issue. Smaller communities usually have a smaller tax base and less money to fund neighborhood improvements.</p>
+<p><img src="images/demographics/home_ownership.png" class="img-fluid" width="571"></p>
+<p>Grundy Center has a much higher home ownership rate than either New Hampton or Independence, which has been consistently higher for the past five years. Grundy Center’s home ownership rate has been higher than all three contextual areas – Iowa, the Midwest, and the United States- for our collected data. Home ownership rates are not reflected in housing quality.</p>
+<p><img src="images/demographics/median_income.png" class="img-fluid"></p>
+<p>Unlike New Hampton and Independence, Grundy Center’s median income is on par with its contextual areas. The median income surpassed the national median in 2019 and has stayed higher. Income is not a problem in Grundy Center.</p>
+<p><img src="images/demographics/median_value.png" class="img-fluid"></p>
+<p>Grundy Center’s median home value has wavered over the years. In 2009, Grundy Center had the lowest median home value of our communities. It has since risen to have the highest median home value. The median home value is significantly lower for all three communities than the contextual areas.</p>
+<p><img src="images/demographics/value_and_year_built.png" class="img-fluid" width="522"></p>
+<p>The houses in our three communities are aged compared to the contextual areas. Iowa has a high percentage of older houses, and this shows in our communities. Grundy Center has the youngest houses and even has a house or two built in 2020 or later. All three cities are missing the increase of houses built from 2010 to 2019, but Grundy Center has the largest percentage of houses built in that time frame.</p>
+<p>Grundy Center is close to the Cedar Falls-Waterloo metropolitan area, which could explain the low housing quality and high growth rate, median income, and housing value. There may be demand for housing in the community, and residents may be traveling outside the city for work.</p>
+<p><strong>Other Visualizations</strong></p>
+<p>Using the Infographics feature on ArcGIS Pro, we also created community summaries of Grundy Center, Independence, and New Hampton. These visualizations are a way that communities can gather demographic data quickly and efficiently themselves. The community summary is a base template, but custom demographics can be used.</p>
+<p><strong>Grundy Center</strong></p>
+<p><img src="images/grundy_center_community_summary (1).png" class="img-fluid" width="703"></p>
+<p><strong>Independence</strong></p>
+<p><img src="images/independence_community_summary.png" class="img-fluid" width="703"></p>
+<p><strong>New Hampton</strong></p>
+<p><img src="images/new_hampton_community_summary.png" class="img-fluid" width="703"></p>
+<p>To make a community summary infographic you can click <a href="https://kailynhogan.github.io/Kailyn_Hogan_DSPG_Blog/posts/Week_7/Week_7.html#monday" target="_blank">here</a> for a guide.</p>
+</section>
+<section id="collecting-data-to-identify-study-communities" class="level3">
+<h3 class="anchored" data-anchor-id="collecting-data-to-identify-study-communities">Collecting Data to Identify Study Communities</h3>
+<p>To keep this project moving into other years, we decided to identify study communities in Iowa that could benefit from this project. All data collection was completed in R Studio using the Tidycensus and Tidyverse packages to pull data from the Decennial Census and American Community Survey (ACS).</p>
+<p>The following demographic data was collected:</p>
+<ul>
+<li><p><strong>Age</strong></p>
+<p>The age of a community’s population can tell its growth. Communities with a higher percentage of their population over the age of sixty-five than those under eighteen could have issues with the younger generations moving away. A high median age could indicate the same issue.</p></li>
+<li><p><strong>Population size</strong></p>
+<p>Specifically, we were looking for communities between 500 and 10,000. Communities with smaller populations are this project’s main focus. We were particularly interested in any communities with a declining population, as that indicates it is struggling.</p></li>
+<li><p><strong>Housing</strong></p>
+<p>A low median house value and high median house age can indicate a struggling community. A high median house age can reveal that new housing is not being built in the community and the community is not growing.</p></li>
+<li><p><strong>Occupancy rates</strong></p>
+<p>Communities with low home ownership and high vacancy rates could have issues and need help. There is little room for community investment if residents cannot afford to buy their own homes.</p></li>
+<li><p><strong>Income</strong></p>
+<p>A low median income or a low percent change in income can indicate a struggling community. There is little room for community investment when residents have little income.</p></li>
+<li><p><strong>Jobs and employment</strong></p>
+<p>Employment statistics are important because there will only be money to invest in a community if people are employed. The percentage of the workforce that commuted to work gives information on where jobs are located. If people are commuting, there are not enough jobs in town. People also tend to move to where jobs are.</p></li>
+</ul>
+<p>We started the visualization process in Tableau for the population data. From this visualization, we can pinpoint Iowa communities with a concerning growth rate and population size.</p>
+<p><img src="images/demographics/percentchangebysize.png" class="img-fluid"></p>
+<p>The plot above is filtered to only show communities in Iowa with a population between 500 and 10,000. The communities that fall below average for percent population change and population size are potential study communities for our project. Further analysis of the other demographic data is required because many communities fall into this category, but this is a good start.</p>
+</section>
+</section>
+<section id="conclusion" class="level2">
+<h2 class="anchored" data-anchor-id="conclusion">Conclusion</h2>
+<p>In conclusion, this project successfully achieved its objectives. The project assessed the results and recommended some research questions and next steps for Year 2 of the project, considering the insights gained and community input received.</p>
+</section>
+<section id="future-research-questions" class="level2">
+<h2 class="anchored" data-anchor-id="future-research-questions">Future Research Questions</h2>
+<p>Research questions to be considered for Year 2 of this project;</p>
+<ul>
+<li><p>Could we use AI to determine which communities could benefit most from our project? By providing the AI model with information about the concerning characteristics of communities, we enable it to derive conclusions and determine which communities should be our target.</p></li>
+<li><p>Could these types of tools be developed into an application and used by cities to evaluate their housing stock?</p></li>
+<li><p>Is there a relationship between neighborhood housing quality and access to school, health care and grocery stores?</p></li>
+<li><p>Leveraging spatial analysis tools, can we gain valuable insights and broaden the analytic capabilities specifically in relation to identifying communities that might benefit? For instance, Geo-spatial Artificial Intelligence (GeoAI).</p></li>
+<li><p>Could we create AI model that can identify houses, trees, sidewalks and evaluate roof condition when given an image of a neighborhood?</p></li>
+</ul>
+<p><img src="images/drone_to_GIS.png" class="img-fluid"></p>
+<section id="future-work-that-chris-needs-to-complete" class="level3">
+<h3 class="anchored" data-anchor-id="future-work-that-chris-needs-to-complete"><strong>Future work that Chris needs to complete:</strong></h3>
+<p><img src="images/chris_todo.png" class="img-fluid"></p>
+</section>
+</section>
+<section id="recommendations" class="level2">
+<h2 class="anchored" data-anchor-id="recommendations">Recommendations</h2>
+<ul>
+<li><p>Based on the image sources used in this project, which are Kaggle, Google Street View, Zillow, Vanguard, Beacon, County Assessor Office/websites, the best image source is <strong>Google</strong>.</p>
+<p>In Year 2, utilize county assessor websites as they provide valuable data for assessment purposes and assess to Zillow, Beacon, Vanguard, and so on.</p></li>
+<li><p>Box is best for storing images while Github is best for storing files. Google Drive will need to separately download images and files to run. Microsoft Teams is good for general quick sharing of information but not a great home for important documents.</p></li>
+<li><p>Collect more training and test house images.</p></li>
+<li><p>Build a broken window model to identify broken or boarded up windows and a trash model to identify trash in the yard.</p></li>
+<li><p><strong>Learning materials on DataCamp</strong></p>
+<p>Deep Learning with PyTorch</p>
+<p>Introduction to Deep Learning with Keras</p>
+<p>Image Processing in Python</p>
+<p>Artificial Intelligence (AI) Concepts in Python</p>
+<p>Introduction to Web Scraping in R</p>
+<p>Understanding machine learning</p>
+<p>Introduction to Tableau</p></li>
+<li><p>Implement F1 Score into the code. It is a popular way to see how well models are performing.</p></li>
+<li><p>Tools used for geocoding were QGIS and R, use python for geocoding to check if it will be better than the two used in the project.</p></li>
+<li><p>Add data relating to accessibility to amenities, that could add valuable information to the analysis.</p></li>
+</ul>
+</section>
+<section id="data-source" class="level2">
+<h2 class="anchored" data-anchor-id="data-source">Data source</h2>
+<ul>
+<li>2000 - 2020 Decennial Census</li>
+<li>2021 5-Year American Community Survey</li>
+<li>Zillow</li>
+<li>Google Street View</li>
+<li>Vanguard</li>
+<li>Beacon</li>
+<li>Additional sources can be found <a href="https://lehd.ces.census.gov/data/" target="_blank">here</a> and <a href="https://data.iowa.gov/Local-Government-Finance/Taxable-Property-Values-in-Iowa-by-Tax-District-an/ig9g-pba5" target="_blank">here</a>.</li>
+</ul>
+
+
+</section>
+</section>
+
+</main> <!-- /main -->
+<script id="quarto-html-after-body" type="application/javascript">
+window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
+  const icon = "";
+  const anchorJS = new window.AnchorJS();
+  anchorJS.options = {
+    placement: 'right',
+    icon: icon
+  };
+  anchorJS.add('.anchored');
+  const isCodeAnnotation = (el) => {
+    for (const clz of el.classList) {
+      if (clz.startsWith('code-annotation-')) {                     
+        return true;
+      }
+    }
+    return false;
+  }
+  const clipboard = new window.ClipboardJS('.code-copy-button', {
+    text: function(trigger) {
+      const codeEl = trigger.previousElementSibling.cloneNode(true);
+      for (const childEl of codeEl.children) {
+        if (isCodeAnnotation(childEl)) {
+          childEl.remove();
+        }
+      }
+      return codeEl.innerText;
+    }
+  });
+  clipboard.on('success', function(e) {
+    // button target
+    const button = e.trigger;
+    // don't keep focus
+    button.blur();
+    // flash "checked"
+    button.classList.add('code-copy-button-checked');
+    var currentTitle = button.getAttribute("title");
+    button.setAttribute("title", "Copied!");
+    let tooltip;
+    if (window.bootstrap) {
+      button.setAttribute("data-bs-toggle", "tooltip");
+      button.setAttribute("data-bs-placement", "left");
+      button.setAttribute("data-bs-title", "Copied!");
+      tooltip = new bootstrap.Tooltip(button, 
+        { trigger: "manual", 
+          customClass: "code-copy-button-tooltip",
+          offset: [0, -8]});
+      tooltip.show();    
+    }
+    setTimeout(function() {
+      if (tooltip) {
+        tooltip.hide();
+        button.removeAttribute("data-bs-title");
+        button.removeAttribute("data-bs-toggle");
+        button.removeAttribute("data-bs-placement");
+      }
+      button.setAttribute("title", currentTitle);
+      button.classList.remove('code-copy-button-checked');
+    }, 1000);
+    // clear code selection
+    e.clearSelection();
+  });
+  function tippyHover(el, contentFn) {
+    const config = {
+      allowHTML: true,
+      content: contentFn,
+      maxWidth: 500,
+      delay: 100,
+      arrow: false,
+      appendTo: function(el) {
+          return el.parentElement;
+      },
+      interactive: true,
+      interactiveBorder: 10,
+      theme: 'quarto',
+      placement: 'bottom-start'
+    };
+    window.tippy(el, config); 
+  }
+  const noterefs = window.document.querySelectorAll('a[role="doc-noteref"]');
+  for (var i=0; i<noterefs.length; i++) {
+    const ref = noterefs[i];
+    tippyHover(ref, function() {
+      // use id or data attribute instead here
+      let href = ref.getAttribute('data-footnote-href') || ref.getAttribute('href');
+      try { href = new URL(href).hash; } catch {}
+      const id = href.replace(/^#\/?/, "");
+      const note = window.document.getElementById(id);
+      return note.innerHTML;
+    });
+  }
+      let selectedAnnoteEl;
+      const selectorForAnnotation = ( cell, annotation) => {
+        let cellAttr = 'data-code-cell="' + cell + '"';
+        let lineAttr = 'data-code-annotation="' +  annotation + '"';
+        const selector = 'span[' + cellAttr + '][' + lineAttr + ']';
+        return selector;
+      }
+      const selectCodeLines = (annoteEl) => {
+        const doc = window.document;
+        const targetCell = annoteEl.getAttribute("data-target-cell");
+        const targetAnnotation = annoteEl.getAttribute("data-target-annotation");
+        const annoteSpan = window.document.querySelector(selectorForAnnotation(targetCell, targetAnnotation));
+        const lines = annoteSpan.getAttribute("data-code-lines").split(",");
+        const lineIds = lines.map((line) => {
+          return targetCell + "-" + line;
+        })
+        let top = null;
+        let height = null;
+        let parent = null;
+        if (lineIds.length > 0) {
+            //compute the position of the single el (top and bottom and make a div)
+            const el = window.document.getElementById(lineIds[0]);
+            top = el.offsetTop;
+            height = el.offsetHeight;
+            parent = el.parentElement.parentElement;
+          if (lineIds.length > 1) {
+            const lastEl = window.document.getElementById(lineIds[lineIds.length - 1]);
+            const bottom = lastEl.offsetTop + lastEl.offsetHeight;
+            height = bottom - top;
+          }
+          if (top !== null && height !== null && parent !== null) {
+            // cook up a div (if necessary) and position it 
+            let div = window.document.getElementById("code-annotation-line-highlight");
+            if (div === null) {
+              div = window.document.createElement("div");
+              div.setAttribute("id", "code-annotation-line-highlight");
+              div.style.position = 'absolute';
+              parent.appendChild(div);
+            }
+            div.style.top = top - 2 + "px";
+            div.style.height = height + 4 + "px";
+            let gutterDiv = window.document.getElementById("code-annotation-line-highlight-gutter");
+            if (gutterDiv === null) {
+              gutterDiv = window.document.createElement("div");
+              gutterDiv.setAttribute("id", "code-annotation-line-highlight-gutter");
+              gutterDiv.style.position = 'absolute';
+              const codeCell = window.document.getElementById(targetCell);
+              const gutter = codeCell.querySelector('.code-annotation-gutter');
+              gutter.appendChild(gutterDiv);
+            }
+            gutterDiv.style.top = top - 2 + "px";
+            gutterDiv.style.height = height + 4 + "px";
+          }
+          selectedAnnoteEl = annoteEl;
+        }
+      };
+      const unselectCodeLines = () => {
+        const elementsIds = ["code-annotation-line-highlight", "code-annotation-line-highlight-gutter"];
+        elementsIds.forEach((elId) => {
+          const div = window.document.getElementById(elId);
+          if (div) {
+            div.remove();
+          }
+        });
+        selectedAnnoteEl = undefined;
+      };
+      // Attach click handler to the DT
+      const annoteDls = window.document.querySelectorAll('dt[data-target-cell]');
+      for (const annoteDlNode of annoteDls) {
+        annoteDlNode.addEventListener('click', (event) => {
+          const clickedEl = event.target;
+          if (clickedEl !== selectedAnnoteEl) {
+            unselectCodeLines();
+            const activeEl = window.document.querySelector('dt[data-target-cell].code-annotation-active');
+            if (activeEl) {
+              activeEl.classList.remove('code-annotation-active');
+            }
+            selectCodeLines(clickedEl);
+            clickedEl.classList.add('code-annotation-active');
+          } else {
+            // Unselect the line
+            unselectCodeLines();
+            clickedEl.classList.remove('code-annotation-active');
+          }
+        });
+      }
+  const findCites = (el) => {
+    const parentEl = el.parentElement;
+    if (parentEl) {
+      const cites = parentEl.dataset.cites;
+      if (cites) {
+        return {
+          el,
+          cites: cites.split(' ')
+        };
+      } else {
+        return findCites(el.parentElement)
+      }
+    } else {
+      return undefined;
+    }
+  };
+  var bibliorefs = window.document.querySelectorAll('a[role="doc-biblioref"]');
+  for (var i=0; i<bibliorefs.length; i++) {
+    const ref = bibliorefs[i];
+    const citeInfo = findCites(ref);
+    if (citeInfo) {
+      tippyHover(citeInfo.el, function() {
+        var popup = window.document.createElement('div');
+        citeInfo.cites.forEach(function(cite) {
+          var citeDiv = window.document.createElement('div');
+          citeDiv.classList.add('hanging-indent');
+          citeDiv.classList.add('csl-entry');
+          var biblioDiv = window.document.getElementById('ref-' + cite);
+          if (biblioDiv) {
+            citeDiv.innerHTML = biblioDiv.innerHTML;
+          }
+          popup.appendChild(citeDiv);
+        });
+        return popup.innerHTML;
+      });
+    }
+  }
+});
+</script>
+</div> <!-- /content -->
+
+
+
+</body></html>

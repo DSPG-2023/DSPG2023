@@ -1,0 +1,594 @@
+---
+title: "Housing Team Final Presentation"
+author: "AI Housing Team"
+date: "2023-07-14"
+categories: [Final Presentation]
+toc: TRUE
+---
+
+# **AI-Driven Housing Evaluation for Rural Community Development**
+
+------------------------------------------------------------------------
+
+![](images/MicrosoftTeams-image%20(1)%202.png)
+
+------------------------------------------------------------------------
+
+## **Introduction**
+
+Crucial to Midwestern rural vitality is a supply of good quality housing for residents of all ages and income levels. Crucial to achieving that goal is a supply of good quality data describing local housing conditions.
+
+Ideally, communities would have ready access to information about their local housing stock to identify needs, set priorities, and optimize allocation of resources and investments. Unfortunately, many small communities lack the capacity to systematically evaluate their housing stock.
+
+City and county property assessors' offices seem a logical source for obtaining local housing data; however, tapping into these assessor databases poses some challenges. Access to a community's full database may be restricted, as most city and county assessors now outsource data management to private firms. Even when accessible, the database may not be amenable to custom tabulations and targeted queries about specific housing conditions. In addition, the subjectivity of the assessment process makes it difficult to compare data across communities.
+
+Data science approaches including Artificial Intelligence (AI) models offer great potential for addressing these and other housing data challenges encountered by rural communities and researchers who study them. For example, image classification models could be used to rate the condition of selected exterior housing features, such as roof and siding, or to detect the presence of problems such as missing or damaged gutters or an overgrown landscape. Leveraging AI technology in this manner could streamline the housing evaluation process, reduce subjectivity, and facilitate informed decision-making for housing investment and development initiatives in rural communities.
+
+## **Goal and Objectives**
+
+The goal of this project is to investigate methods for conducting a thorough and objective evaluation of a community's housing stock using AI, and also to explore how such methods could be adapted for multi-community analysis of relationships between housing quality and other local attributes in rural areas.
+
+**Objectives:**
+
+-   Conduct a literature review to examine examples of AI applications in planning and housing.
+
+-   Identify study communities and collect data about the communities.
+
+-   Collect housing data, including images, from existing sources such as realtor websites, Google Street View and county assessor websites.
+
+-   Collect data on housing age, number of bedrooms, square footage, and assessed value.
+
+-   Utilize roof, gutter, siding, and landscape condition as part of AI analysis to identify homes that may qualify for community assistance programs.
+
+-   Assess the results and recommend next steps for Year 2 of the project, considering the insights gained and community input received.
+
+## **Literature Review**
+
+An important objective of the project was its focus on reviewing as much accessible literature and websites. Review of how cities have been using AI to address problems, and specifically housing problems, and how counties or cities assess housing conditions. The section also answers the question, what data might we use to assess housing condition in this project?
+
+1.  **Ames City Housing Inspection**
+
+In the context of housing inspections, the City of Ames in Iowa has implemented a comprehensive housing inspection program to ensure housing quality and safety standards are met. The Ames City Housing Inspection program focuses on various aspects of housing conditions, including grass height, weeds, trees, refuse-garbage, sidewalks, deck/porch, gutters, paint, roof, windows, structural foundation, and graffiti (City of Ames, 2021). This program serves as a valuable reference for evaluating and assessing housing quality in the rural context, particularly in the Iowa region. However, despite the efforts made by programs like the Ames City Housing Inspection, the subjective nature of evaluating existing housing conditions and the limited availability of resources for thorough investigations still pose challenges.
+
+Read more [here](https://www.cityofames.org/home/showpublisheddocument/53168/637087226539170000){target="_blank"} and [here](https://jse.amstat.org/v19n3/decock/DataDocumentation.txt){target="_blank"}.
+
+2.  **U.S Department of Housing and Urban Development** 
+
+The U.S. Department of Housing and Urban Development (HUD) plays a vital role in ensuring housing quality standards across the United States. In their assessment of housing quality, HUD examines various aspects of the building exterior, including the condition of the foundation, stairs, rails, porches, roof, gutters, exterior surfaces, and chimney. Additionally, HUD emphasizes the importance of evaluating lead-based paint on exterior surfaces to ensure the safety and well-being of residents. These guidelines provided by HUD serve as a valuable reference for assessing and maintaining housing quality standards, contributing to the overall improvement of housing conditions nationwide. 
+
+Read more [here](https://www.hud.gov/sites/dfiles/OCHCO/documents/52580A.PDF){target="_blank"}.
+
+3.  **Orange County Minimum Housing Code**  
+
+The Orange County minimum housing code plays a crucial role in ensuring housing standards and safety within the county. As outlined in Section 20-34 of the code, specific requirements include the maintenance of a safe foundation, stairs, walls, roofs, and porches. The code also addresses concerns such as high weeds and dilapidated vehicles, which can impact the overall quality of housing in the area. 
+
+Read more [here](https://library.municode.com/nc/orange_county/codes/code_of_ordinances?nodeId=PTIGEOR_CH20HO_ARTIIMIHOST){target="_blank"}.
+
+4.  **Turning Data into Equity**
+
+In Detroit, 150 residents were tasked with surveying vacant land across the city that could be used. According to [Data-Smart City Solutions](https://datasmart.ash.harvard.edu/news/article/battling-blight-four-ways-cities-are-using-data-to-address-vacant-propertie){target="_blank"}, part of Harvard University, around 40,000 properties were found to be blighted and were subsequently given priority for either demolition or remediation. By involving residents in the surveying process, the city successfully identified a significant number of blighted properties, allowing for informed decision-making on demolition or remediation. Community engagement offers an avenue for prioritization, transparency, and alignment with local needs and aspirations.
+
+5.  **RoadBotics**
+
+RoadBotics has developed a technology using artificial intelligence that has the ability to analyze road imagery to then assess issues and produce cost effective solutions. This allows cities to know when and where repairs need to take place, and deal with them while saving money. This type of technology also improves safety within cities as problems will not go unnoticed. 
+
+Read more [here](https://www.roadbotics.com/roadway-tutorial/){target="_blank"}. 
+
+6.  [Mason City](https://www.masoncityassessor.net/){target="_blank"} **Assessment**
+
+According to Tara Brueggeman, an Assessor for Mason City, data is primarily sourced from publicly available platforms such as Beacon and the Vanguard assessment data management system. While web scraping is not feasible, city and county assessor offices can generate customized reports using SQL from Vanguard.
+
+During the appraisal process, appraisers rely on blueprints for property details and conduct in-person visits to measure and inspect properties. Interior inspections are now limited due to homeowner preferences, but the condition of the exterior serves as a valuable indicator. To minimize bias, appraisers adhere to guidelines outlined in the Iowa Real Property appraisal manual, avoid assessments during unfavorable personal circumstances, and undergo a review process by another individual before finalizing assessment records. These efforts contribute to the objectivity and accuracy of property assessments in Mason City.
+
+7.  **Des Moines Neighborhood Revitalization Program**
+
+The Des Moines Revitalization program is pioneering a groundbreaking approach to assess housing conditions through the utilization of AI. With the aim of revitalizing the city's housing stock, this innovative program leverages AI technology to objectively evaluate the condition of homes in Des Moines. By analyzing various data points, including structural features, maintenance history, and overall quality, the AI system provides a comprehensive assessment of each property. This data-driven approach allows the program to identify areas in need of improvement, prioritize revitalization efforts, and allocate resources effectively.
+
+Read more [here](https://www.desmoinesregister.com/story/news/local/des-moines/2023/03/08/des-moines-wonders-if-a-machine-can-better-assess-home-conditions/69965121007/?utm_source=ground.news&utm_medium=referral){target="_blank"} and [here](https://www.axios.com/local/des-moines/2023/03/10/ai-assessment-desmoines-properties-iowa){target="_blank"}.
+
+## Workflow
+
+The image below depicts our project plan, outlining the strategies and actions we undertook to accomplish our objectives. The strategies include image gathering / data collection, creating a database and building AI models.
+
+![](images/project_plan_new2.png)
+
+## Data Collection
+
+We first gathered house images manually from Kaggle, amassing a total of approximately 35,000 images. Kaggle is a website for hosting and sharing datasets. This website has many useful datasets for building AI models, which is why we decided to use images from Kaggle to aid in the initial AI model building process.
+
+However, since we needed more relevant images specific to Iowa, we decided to web scrape from other sources. Through this technique, we automated the process of acquiring images. Despite this improvement, we still had to manually sift through the gathered images, distinguishing those of high quality and suitable features for training our model from those of poorer quality.
+
+Based on the WINVEST project, the team decided to web scrape housing images and data from the communities of Grundy Center, New Hampton and Independence.
+
+### What is Web Scraping?
+
+Web scraping is like a digital tool that automatically collects information from websites, allowing us to gather data quickly without manual searching.
+
+Before starting any web scraping, our team had a plan to scrape the following websites for image, address, and attribute data:
+
+-   **Realtor Websites**
+
+    [**Zillow**](https://www.zillow.com/?utm_medium=cpc&utm_source=google&utm_content=1471764169%7C65545421228%7Caud-352785741564:kwd-570802407%7C603457706088%7C&semQue=null&gclid=EAIaIQobChMI-Nv7oPL3_wIVWSazAB0eyA9CEAAYASAAEgKaafD_BwE){target="_blank"} and [**Trulia**](https://www.trulia.com/){target="_blank"}
+
+    Zillow and Trulia are online platforms and app for real estate that allows users to search for homes, view property listings, and access data on home values and market trends.
+
+    [**Realtor.com**](https://www.realtor.com/){target="_blank"}
+
+    Realtor.com is a website and app that offers a comprehensive database of property listings, allowing users to search for homes, apartments, and other real estate options. It also provides resources for finding real estate agents.
+
+-   **County Assessor Websites**
+
+    These are online portals provided by local government entities that offer property-related information, including property records, tax assessments, and maps. Users can access details about property ownership and tax information.
+
+-   [**Vanguard Appraisals, Inc**](https://www.iowaassessors.com/){target="_blank"}
+
+    Vanguard Appraisals, Inc is a company that specializes in providing property appraisal services and software solutions for assessment in cities, counties and township Assessment Offices.-
+
+-   [**Beacon**](https://beacon.schneidercorp.com/){target="_blank"} **by Schneider Geospatial**
+
+    This is a software platform used for property assessment and tax administration. It helps government agencies manage property data, valuation processes, and tax assessments by offering geospatial mapping, data analytics, and reporting capabilities.
+
+-   [**Google Street View**](https://www.google.com/maps/@42.0275015,-93.6351493,14z?entry=ttu){target="_blank"}
+
+    Google Street View is a feature that provides 360-degree panoramic views of streets and locations worldwide. It allows users to virtually explore places, landmarks, and even remote areas, offering a unique visual experience from the comfort of their screens.
+
+Upon further reflection, we realized that Zillow owns Trulia. The major difference in the two sites is the Zestimate provided on Zillow. Because we were interested in the housing value, we chose to scrape Zillow out of the two.
+
+We collected data from the following sites:
+
+-   Zillow
+-   Polk County Assessor Website
+-   Vanguard
+-   Beacon
+-   Google Street View
+
+### Address Collection
+
+Lists of addresses and other information for Iowa cities are very hard to come by. It is not likely that such lists exists for cities. This is why we planned to scrape data.
+
+Vanguard and Beacon are companies used by most cities in Iowa. They hold much of the state's housing data. This is why the data collection from these websites were of importance.
+
+Vanguard has a GIS tool available that allowed us to select portions of cities and download addresses and parcel numbers. Only data for Independence was available through Vanguard. Vanguard limits the number of parcels we can select at a time for download.
+
+Beacon has more protection against web scraping than Vanguard. Also, the GIS tool was not available for Beacon data. The process of downloading data one house at a time would be extremely time consuming. For example, Grundy Center, a city of around 2,000 people, has approximately 1,200 addresses. Collecting data for 1,200 addresses without automation would take a very long time.
+
+To scrape addresses and parcel numbers, we used the [Instant Data Scraper Tool](https://chrome.google.com/webstore/detail/instant-data-scraper/ofaokhiedipichpaobibbnahnkdoiiah){target="_blank"}. This scraper provided us with CSV files of house data.
+
+Once the data had been scraped, we found that the CSV files provided us with a format that was not ideal.
+
+Examples of issues we encountered with the CSV files:
+
+-   Many of the cells contained hidden characters.
+
+-   New lines within the cells.
+
+To fix this file format, we used Excel's Text-to-Columns tool to organize text, and Excel functions to separate and combine sections, and the Excel Find and Replace tool to remove unwanted characters.
+
+In addition to re-formatting data, it was also necessary to create links for the Google Street View image collection process. Below is an example of a link to a Google Street View Image.
+
+**https://maps.googleapis.com/maps/api/streetview?size=800x800&location=303+I+AVE,+GRUNDY+CENTER+IOWA**
+
+More information [here](https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#address-collection-and-cleaning){target="_blank"}.
+
+### Image Collection
+
+Out of our five scraping sites, we got images from Zillow and Google Street View. Both sites presented challenges in gathering images. Because of the challenges, we decided to use WINVEST photos as well. In total, the image data came from four sites:
+
+-   Zillow
+
+-   Google Street View
+
+-   WINVEST
+
+-   Vanguard
+
+**Naming Convention**
+
+Before we collected images, we created a standardized naming convention to maintain efficient organization. The base of our naming convention is **source_city_address\_**. In general, the first letter of the source or city represents it. Independence and New Hampton were adjusted to use the letter "D"and "H," respectively.
+
+| Source       | City              |
+|--------------|-------------------|
+| Z - Zillow   | H - New Hampton   |
+| G - Google   | D - Independence  |
+| V - Vanguard | G - Grundy Center |
+| B - Beacon   | S - Slater        |
+| W - WINVEST  |                   |
+
+Here is an example of the naming convention in use:
+
+> Source: Zillow
+>
+> City: New Hampton, Iowa
+>
+> Address: 311 W Main St
+>
+> **Result**: Z_H_311 W MAIN ST\_
+
+### Web Scraping Zillow
+
+We scraped and downloaded image URLs for "For Sale" houses and recently Sold houses on Zillow. In total, we could scrape about one hundred images from Zillow. There were many more images available on Zillow that we couldn't scrape.
+
+**Challenges and Limitations of Scraping Zillow**
+
+-   Good images are only available for For Sale and recently Sold houses. Other house images on Zillow are taken from Google.
+
+-   Images are stored in a carousel. The only image we could scrape was the first, which wasn't always an image of the exterior.
+
+-   Lazy loading: The term "lazy loading" refers to how a webpage loads its data. Because Zillow is lazy, it only loads the image data when the user scrolls down the page. When web scraping, only the loaded images are available. A more complicated process is needed to scrape a lazily loaded webpage.
+
+Zillow is a great source for image data if you can get around the lazy loading issue and grab all images from the carousel. Zillow images for For Sale homes are more recent than other sources.
+
+### Scraping Google Street View
+
+A Google API key is required to scrape images from Google Street View. It is included in the image URL to allow viewing of a specific house.
+
+As discussed earlier, the address data scraped from Vanguard and Beacon was cleaned and stored in CSV files to create the image URLs for use with Google Street View. We wrote code to open each image URL in the CSV file and download the image.
+
+Here is an example of the code to download the image from Google Street View.
+
+```{R, eval = FALSE}
+
+data <- read.csv("file_path")
+
+urls_start <- data[, 1]
+
+urls_full <- paste(urls_start, “&key=”, sep = ““)
+
+urls_full_api_key <- paste(urls_full, api_key, sep = ““)
+
+# creates folder and downloads all images
+
+dir.create(“google_images_folder_name”)
+
+for(i in seq_along(urls_full_api_key)) {
+
+___ file_path <- file.path(“google_images_folder_name”, paste0(“image_name”, data[i,6], “_.png”))
+
+___ download.file(urls_full_api_key[i], file_path, mode = “wb”)
+
+___ print(file_path)
+
+___ print(i)
+
+}
+```
+
+Click [here](https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#creating-google-api-links){target="_blank"} for more information.
+
+**Challenges of Scraping Google Street View**
+
+During the process of gathering images from Google Street View, we encountered the following problems:
+
+-   Image downloading takes time. It takes upwards of an hour for a city of 2,000.
+
+-   Blurred houses. Certain homeowners request Google to intentionally blur their residences on Google Street View to protect their privacy. Such images were ignored.
+
+-   Address inconsistencies in Independence that caused errors when scraping. Some houses listed multiple house numbers, such as 100/101, while others had addresses like 100 1/2.
+
+-   Duplicate images for different addresses.
+
+-   Particular streets were not mapped, particularly in New Hampton, resulting in no image available.
+
+-   Images of inside of stores showing as an exterior house image.
+
+::: {layout-ncol="2"}
+![](images/MicrosoftTeams-image%20(1).png){width="436"}
+
+![](images/no_image.png){width="436"}
+:::
+
+Click [here](https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#scrape-google-images){target="_blank"} for more information on collecting images from Google Street View.
+
+### Attribute Collection
+
+**Using a Spider to Collect Vanguard Information**
+
+A spider is an automated version of web scraping that automatically goes page by page on a website. A spider reduces manual involvement in the scraping process and makes it more efficient.
+
+Aaron Case, our friend on the AI Local Foods team, built us a spider to scrape Vanguard data. We were able to grab the following information from Vanguard:
+
+-   Parcel number
+
+-   Image URL
+
+-   House style
+
+-   Year built
+
+-   Square footage
+
+-   Appraised value
+
+Click [here](https://cyberspeedac.github.io/Aaron-Case-DSPG-Blog/posts/Aaron_C_MultiWeek/Aaron_C_WebScraping.html){target="_blank"} for more information on how Spider works.
+
+## AI Models
+
+This section demonstrates the potential of AI to recognize the quality of house.
+
+Details of the first AI model can be found [here](https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_week3/Week_Three.html){target="_blank"}.
+
+-   Building a Binary Image Classification AI Model - [Binary Image Classification](https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#building-a-binary-image-classification-ai-model){target="_blank"}
+
+-   Building a Multi-Category Image Classification AI Model - [Multi-Category Image Classification](https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#building-a-multi-category-image-classification-ai-model){target="_blank"}
+
+-   Sorting Images - [Image Sorting](https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#sorting-images){target="_blank"}
+
+-   Training the Model - [Model Training](https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#training-the-model){target="_blank"}
+
+-   Utilizing a Trained AI Model - [Utilizing AI Model](https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#utilizing-a-trained-ai-model){target="_blank"}
+
+-   Exporting Predictions to a CSV on Address - [Export Predictions](https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_guide_w7/full_guide.html#exporting-predictions-to-a-csv-on-address){target="_blank"}
+
+![](images/Endgame.png)
+
+### [Guide to Housing Project AI Models](https://gavinfishy.github.io/Gavin_DSPG_Blog/posts/Gavin-Fisher_AI_guide_w9/AI_guide.html){target="_blank"}
+
+### Confidence Level and Accuracy of Models
+
+![](images/accuracy_percent.png)
+
+## Geographic Visualization
+
+### What is GIS and how is it used in this project?
+
+A Geographic Information System (GIS) is a spatial system that is used to analyze, display and store geographically referenced information. GIS uses data that is attached to a unique location and can be useful for identifying problems and trends.
+
+More information [here](https://www.esri.com/en-us/what-is-gis/overview){target="_blank"}.
+
+Mapping our house quality output using GIS enables us to visualize the AI-model output for vegetation, siding, gutters, and roof characteristics. This will allow us to visualize locations of houses in good conditions versus poor condition.
+
+In the future, it could be beneficial to utilize statistical analysis techniques to understand the spatial relationship between data and visualize clusters.
+
+### Geocoding Addresses
+
+To visualize addresses for the communities, first we needed to geocode each address. Because GIS does not always know the exact location of an address, the latitude and longitude of addresses are needed. There are many types of software that can be used to geocode addresses.
+
+QGIS is an open-source GIS software. We first geocoded addresses by using the QGIS Plugin called MMQGIS. When using this method, the plugin would crash and fail to geocode all the addresses. Because of this, we geocoded addresses using R instead. Base code was from [storybench](https://www.storybench.org/geocode-csv-addresses-r/){target="_blank"}.
+
+Below is an image of a CSV file with addresses latitude and longitude.
+
+![](images/ogden_geocoded_addresses.png)
+
+More information [here](https://www.esri.com/en-us/what-is-gis/overview){target="_blank"}.
+
+### Mapping the Data
+
+We first created maps in QGIS.
+
+![](images/siding_slater.png)
+
+We later realized we can use Tableau for better data connections and visualizations. Tableau is a software used for data visualization. Tableau was more appealing because of its ability to create maps and compare data between cities using the same software. ArcGIS is another viable option for mapping, but it requires a licence and for the reasons above, we chose to use Tableau.
+
+We created a step by step process for creating a tableau dashboard showing the output from the AI Models and mapping it to the already geocoded addresses.
+
+Click [here](https://1angelinaevans.github.io/AngelinaEvansBlog/posts/MappingHouseData/MappingHouseQuality.html){target="_blank"} for more information.
+
+### Tableau Dashboard
+
+![](images/screenshot_dashboardnew.png){width="619"}
+
+#### [Tableau Dashboard](https://1angelinaevans.github.io/AngelinaEvansBlog/posts/House%20Quality%20Dashboards/HouseQualityDashboard.html){target="_blank"}
+
+## Demographic Analysis
+
+Identifying housing issues in a rural community requires more than just describing the physical and locational characteristics of its housing stock. A more complete understanding of local housing issues also requires consideration of the community's residents. After consulting with our clients, we selected a set of demographic and economic measures to characterize the local population in our study communities. These indicators allow communties to put their local housing conditions within a broader context of peer cities.
+
+### Profiling Using R Studio
+
+We developed a demographic profile of the three WINVEST cities - Grundy Center, Independence, and New Hampton - using R Studio. A demographic profile is a type of demographic analysis that focuses on a specific area. They are built using demographic data. Demographic data are data on **age**, **race**, **ethnicity**, **gender**, **marital status**, **income**, **education**, and **employment**.
+
+The following demographic data were used for the demographic profile of the communities:
+
+-   Population
+
+-   Median income
+
+-   Median home value
+
+-   Median year home built
+
+-   Home ownership rates
+
+We chose these demographic data to give a well-rounded analysis of the housing demographics in our chosen communities and add context to the housing conditions we gathered.
+
+Our data came from the **United States Decennial Census** and the **American Community Survey (ACS)**. The U.S. census is one of the best places to gather demographic data because it counts every resident in the United States. It has a very low inaccuracy, but the U.S. census is only conducted every ten years. The American Community Survey (ACS) is your best bet for more recent data. The ACS has more detailed demographic data and is conducted every five years for the entirety of the United States and every year for places with a population over 65,000. The ACS does not count every individual resident in the United States and instead relies on surveying a proportion of the population to create estimates of the demographics. Thus, it can be inaccurate and provides a margin of error. It is best used for data on the changing population, housing, and workforce.
+
+To collect data in R Studio, we installed the *Tidyverse* and *Tidycensus* packages and loaded them with the `library()` function.
+
+```{r, eval = FALSE}
+install.packages("tidyverse") 
+install.packages("tidycensus")
+```
+
+```{r, message = FALSE, warning = FALSE}
+library(tidyverse) 
+library(tidycensus)
+```
+
+The *Tidyverse* package includes a range of functions that make coding in R Studio more user-friendly. It is not necessary for data collection, but it certainly does help. In contrast, the *Tidycensus* package is essential to data collection. The *Tidycensus* package lets you pull data directly from the Decennial Census and the ACS using the `get_decennial()` and `get_acs()` functions. You only need to specify three arguments to pull data: geography, year, and variable.
+
+```{r, eval = FALSE}
+get_decennial(geography = "state",
+              variable = "P001001",
+              year = 2010)  
+
+get_acs(geography = "region",
+        variable = "B19013_001",
+        year = 2010)
+```
+
+To visualize data in R Studio, we installed and loaded more packages: *ggplot2, scales,* and *ggthemes.*
+
+```{r, eval = FALSE}
+install.packages("ggplot2") 
+install.packages("scales") 
+install.packages("ggthemes")
+```
+
+```{r, message = FALSE}
+library(ggplot2) 
+library(scales) 
+library(ggthemes)
+```
+
+*The ggplot2* package is required to create a plot in R Studio. With *ggplot2* you get access to the function `ggplot(),` which allows you to create visualizations. `ggplot()` takes the arguments `data` and `mapping` to create a plot. `Mapping` refers to the x and y coordinates of our data. There are various geoms included in the *ggplot2* package that aid in creating a visualization. Here are some examples:
+
+| Geom             | Result       |
+|------------------|--------------|
+| geom_line()      | line graph   |
+| geom_point()     | scatter plot |
+| geom_histogram() | histogram    |
+| geom_bar()       | bar chart    |
+| geom_col()       | column chart |
+
+Using the packages above, the following plots were made in R Studio. For an example of how the demographic profile can be used, let's analyze Grundy Center. Mentioned above, Grundy Center has the lowest housing conditions of our three cities.
+
+::: {layout-ncol="2"}
+![](images/demographics/all_percent_change.png){width="596"}
+
+![](images/demographics/pop_projection_cities.png){width="596"}
+:::
+
+Grundy Center has a percent population change of 7.70%, which is right alongside the percent population change of the state of Iowa and the Midwest. Interestingly, New Hampton has a negative percent change, and Independence has a fairly stable population change. The growth rate of Grundy Center is not reflected in its housing quality.
+
+The population projection plot shows Grundy Center is the smallest of our three communities. Its size may explain the housing quality issue. Smaller communities usually have a smaller tax base and less money to fund neighborhood improvements.
+
+![](images/demographics/home_ownership.png){width="571"}
+
+Grundy Center has a much higher home ownership rate than either New Hampton or Independence, which has been consistently higher for the past five years. Grundy Center's home ownership rate has been higher than all three contextual areas -- Iowa, the Midwest, and the United States- for our collected data. Home ownership rates are not reflected in housing quality.
+
+![](images/demographics/median_income.png)
+
+Unlike New Hampton and Independence, Grundy Center's median income is on par with its contextual areas. The median income surpassed the national median in 2019 and has stayed higher. Income is not a problem in Grundy Center.
+
+![](images/demographics/median_value.png)
+
+Grundy Center's median home value has wavered over the years. In 2009, Grundy Center had the lowest median home value of our communities. It has since risen to have the highest median home value. The median home value is significantly lower for all three communities than the contextual areas.
+
+![](images/demographics/value_and_year_built.png){width="522"}
+
+The houses in our three communities are aged compared to the contextual areas. Iowa has a high percentage of older houses, and this shows in our communities. Grundy Center has the youngest houses and even has a house or two built in 2020 or later. All three cities are missing the increase of houses built from 2010 to 2019, but Grundy Center has the largest percentage of houses built in that time frame.
+
+Grundy Center is close to the Cedar Falls-Waterloo metropolitan area, which could explain the low housing quality and high growth rate, median income, and housing value. There may be demand for housing in the community, and residents may be traveling outside the city for work.
+
+**Other Visualizations**
+
+Using the Infographics feature on ArcGIS Pro, we also created community summaries of Grundy Center, Independence, and New Hampton. These visualizations are a way that communities can gather demographic data quickly and efficiently themselves. The community summary is a base template, but custom demographics can be used.
+
+**Grundy Center**
+
+![](images/grundy_center_community_summary%20(1).png){width="703"}
+
+**Independence**
+
+![](images/independence_community_summary.png){width="703"}
+
+**New Hampton**
+
+![](images/new_hampton_community_summary.png){width="703"}
+
+To make a community summary infographic you can click [here](https://kailynhogan.github.io/Kailyn_Hogan_DSPG_Blog/posts/Week_7/Week_7.html#monday){target="_blank"} for a guide.
+
+### Collecting Data to Identify Study Communities
+
+To keep this project moving into other years, we decided to identify study communities in Iowa that could benefit from this project. All data collection was completed in R Studio using the Tidycensus and Tidyverse packages to pull data from the Decennial Census and American Community Survey (ACS).
+
+The following demographic data was collected:
+
+-   **Age**
+
+    The age of a community's population can tell its growth. Communities with a higher percentage of their population over the age of sixty-five than those under eighteen could have issues with the younger generations moving away. A high median age could indicate the same issue.
+
+-   **Population size**
+
+    Specifically, we were looking for communities between 500 and 10,000. Communities with smaller populations are this project's main focus. We were particularly interested in any communities with a declining population, as that indicates it is struggling.
+
+-   **Housing**
+
+    A low median house value and high median house age can indicate a struggling community. A high median house age can reveal that new housing is not being built in the community and the community is not growing.
+
+-   **Occupancy rates**
+
+    Communities with low home ownership and high vacancy rates could have issues and need help. There is little room for community investment if residents cannot afford to buy their own homes.
+
+-   **Income**
+
+    A low median income or a low percent change in income can indicate a struggling community. There is little room for community investment when residents have little income.
+
+-   **Jobs and employment**
+
+    Employment statistics are important because there will only be money to invest in a community if people are employed. The percentage of the workforce that commuted to work gives information on where jobs are located. If people are commuting, there are not enough jobs in town. People also tend to move to where jobs are.
+
+We started the visualization process in Tableau for the population data. From this visualization, we can pinpoint Iowa communities with a concerning growth rate and population size.
+
+![](images/demographics/percentchangebysize.png)
+
+The plot above is filtered to only show communities in Iowa with a population between 500 and 10,000. The communities that fall below average for percent population change and population size are potential study communities for our project. Further analysis of the other demographic data is required because many communities fall into this category, but this is a good start.
+
+## Conclusion
+
+In conclusion, this project successfully achieved its objectives. The project assessed the results and recommended some research questions and next steps for Year 2 of the project, considering the insights gained and community input received.
+
+## Future Research Questions
+
+Research questions to be considered for Year 2 of this project;
+
+-   Could we use AI to determine which communities could benefit most from our project? By providing the AI model with information about the concerning characteristics of communities, we enable it to derive conclusions and determine which communities should be our target.
+
+-   Could these types of tools be developed into an application and used by cities to evaluate their housing stock?
+
+-   Is there a relationship between neighborhood housing quality and access to school, health care and grocery stores?
+
+-   Leveraging spatial analysis tools, can we gain valuable insights and broaden the analytic capabilities specifically in relation to identifying communities that might benefit? For instance, Geo-spatial Artificial Intelligence (GeoAI).
+
+-   Could we create AI model that can identify houses, trees, sidewalks and evaluate roof condition when given an image of a neighborhood?
+
+![](images/drone_to_GIS.png)
+
+### **Future work that Chris needs to complete:**
+
+![](images/chris_todo.png)
+
+## Recommendations
+
+-   Based on the image sources used in this project, which are Kaggle, Google Street View, Zillow, Vanguard, Beacon, County Assessor Office/websites, the best image source is **Google**.
+
+    In Year 2, utilize county assessor websites as they provide valuable data for assessment purposes and assess to Zillow, Beacon, Vanguard, and so on.
+
+-   Box is best for storing images while Github is best for storing files. Google Drive will need to separately download images and files to run. Microsoft Teams is good for general quick sharing of information but not a great home for important documents.
+
+-   Collect more training and test house images.
+
+-   Build a broken window model to identify broken or boarded up windows and a trash model to identify trash in the yard.
+
+-   **Learning materials on DataCamp**
+
+    Deep Learning with PyTorch
+
+    Introduction to Deep Learning with Keras
+
+    Image Processing in Python
+
+    Artificial Intelligence (AI) Concepts in Python
+
+    Introduction to Web Scraping in R
+
+    Understanding machine learning
+
+    Introduction to Tableau
+
+-   Implement F1 Score into the code. It is a popular way to see how well models are performing.
+
+-   Tools used for geocoding were QGIS and R, use python for geocoding to check if it will be better than the two used in the project.
+
+-   Add data relating to accessibility to amenities, that could add valuable information to the analysis.
+
+## Data source
+
+-   2000 - 2020 Decennial Census
+-   2021 5-Year American Community Survey
+-   Zillow
+-   Google Street View
+-   Vanguard
+-   Beacon
+-   Additional sources can be found [here](https://lehd.ces.census.gov/data/){target="_blank"} and [here](https://data.iowa.gov/Local-Government-Finance/Taxable-Property-Values-in-Iowa-by-Tax-District-an/ig9g-pba5){target="_blank"}.
